@@ -1,0 +1,102 @@
+ @import "tailwindcss/base";
+ @import "tailwindcss/components";
+ @import "tailwindcss/utilities";
+ @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Play:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+ body {
+   margin: 0;
+   padding: 0;
+
+   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+   width: 100%;
+   height: 100%;
+   background-color: #161f2f;
+ }
+
+ *::selection {
+   background-color: #0d0f1e;
+   color: #ffffff;
+ }
+
+
+
+ *::-webkit-scrollbar {
+   display: none;
+ }
+
+ * {
+   font-family: "Play", sans-serif;
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+ }
+
+ #Payment-Section {
+   background-image: url('./components/images/PaymentPageBAckgrounde\ Image.png');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-color: #6abcf8;
+ }
+
+ #TechKshitizUserPublicProfile {
+   background-image: url('./components/images/TechKShitizProfileBackground.webp');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-color: #6abcf8;
+ }
+
+ .number-input-Default-properties-hide::-webkit-outer-spin-button,
+ .number-input-Default-properties-hide::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+ }
+
+ .number-input-Default-properties-hide {
+   -moz-appearance: textfield;
+
+ }
+
+ #payment-Scanner {
+   background-image: url('./components/images/PayPayment.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-color: #6abcf8;
+ }
+
+ .NewButton::after {
+   content: "";
+   position: absolute;
+   top: -50%;
+   left: 6%;
+   width: 5%;
+   height: 5%;
+   background: rgba(255, 255, 255, .4);
+   border: 15px solid #ffffffe3;
+   transform: rotate(30deg);
+   opacity: 0;
+   animation: shine 1.5s linear infinite;
+ }
+
+ @keyframes shine {
+   0% {
+     transform: rotate(30deg) translate(-150%);
+     opacity: 0;
+   }
+
+   50% {
+     opacity: 1;
+   }
+
+   100% {
+     transform: rotate(30deg) translate(150%);
+     opacity: 0;
+   }
+
+ }

@@ -1,0 +1,46 @@
+.container-Background {
+  width: 100%;
+  height: 82.7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #082c2c;
+  background: linear-gradient(135deg,
+      #062222 25%,
+      #0d0f1e 25%,
+      #0d0f1e 50%,
+      #082c2c 50%,
+      #082c2c 75%,
+      #0d0f1e 75%,
+      #191d38);
+  background-size: 40px 40px;
+
+  animation: move 7s linear infinite;
+}
+
+.container-Background-CampusAmbassadorLandingPage {
+  width: 100%;
+  height: 100vh;
+  background: #082c2c;
+  background: linear-gradient(135deg,
+      #062222 25%,
+      #0d0f1e 25%,
+      #0d0f1e 50%,
+      #082c2c 50%,
+      #082c2c 75%,
+      #0d0f1e 75%,
+      #191d38);
+  background-size: 40px 40px;
+
+  animation: move 7s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 40px 40px;
+  }
+}
