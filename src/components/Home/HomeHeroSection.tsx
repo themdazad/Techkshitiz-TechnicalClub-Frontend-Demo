@@ -1,29 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import slide1 from "../images/slide1.jpeg";
-import slide2 from "../images/slide2.jpeg";
-import slide4 from "../images/slide4.jpeg";
-import slide5 from "../images/slide5.jpeg";
-import slide6 from "../images/slide6.jpeg";
-import slide7 from "../images/slide7.jpeg";
-import slide8 from "../images/slide8.jpeg";
-import slide9 from "../images/slide9.jpeg";
 import CountDownEvent from "./CountDownEvent.tsx";
-import firstWinner from "../images/firstWinner.svg";
 import Slide from "../Loader/Slide.tsx";
 import ProfessorAndPrincipalPortfolio from "./ProfessorAndPrincipalPortfolio.tsx";
 import EventNotices from "../PopUpMessages/EventNotices.tsx";
+import { useMemo } from "react";
+
 function HomeHeroSection({ winnerParticipantData, IsLoading }) {
-  const images = [
-    slide6,
-    slide7,
-    slide8,
-    slide9,
-    slide2,
-    slide1,
-    slide5,
-    slide4,
-  ];
+  const images = useMemo(
+    () => [
+      "/images/carousel/slide1.jpeg",
+      "/images/carousel/slide2.jpeg",
+      "/images/carousel/slide3.jpeg",
+      "/images/carousel/slide4.jpeg",
+      "/images/carousel/slide5.jpeg",
+      "/images/carousel/slide6.jpeg",
+      "/images/carousel/slide7.jpeg",
+    ],
+    []
+  );
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentImageIndexWinner, setCurrentImageIndexWinner] = useState<
     string[]
@@ -119,13 +114,17 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
       );
     }
   };
+
   const navigate = useNavigate();
   const OnClickWinnerDataShow = (WinnerParticipantClickedData) => {
     // navigate(`student/v1/${WinnerParticipantClickedData?.Participant_Name}/${WinnerParticipantClickedData?.Participant_profile_Id}`, { state: WinnerParticipantClickedData })
   };
   return (
     <>
-      <div className=" absolute top-[60px]  left-0  w-[100%] h-[500px] max-[750px]:h-[400px] max-[550px]:h-[350px] overflow-hidden z-[-1]">
+      {/* Important announcement Popup Message bar */}
+      <EventNotices />
+
+      <div className=" absolute top-[60px]  left-0  w-[100%] h-[600px] max-[750px]:h-[400px] max-[550px]:h-[350px] overflow-hidden z-[-1]">
         {images.length > 0 ? (
           images.map((imageUrl, index) => (
             <img
@@ -145,29 +144,35 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
       <div
         className={`  w-[100vw] h-[500px] max-[750px]:h-[400px]  max-[550px]:h-[350px]`}
       >
-        <div className="w-[100%] h-[100%]   md:shadow-[inset_0px_0px_1000px_80px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
-          <div className="w-[810px] h-[90%]  pl-[71px] pt-[100px] max-[750px]:pt-[70px] max-[550px]:pt-[60px]  max-[350px]:pt-[70px] max-[550px]:pl-[20px] max-[1150px]:w-[710px] max-[850px]:pl-[50px]  max-[750px]:w-[600px]   max-[750px]:pl-[30px] select-none max-[600px]:w-[100%]">
-            {/* <div className=' w-[100%] h-[auto]'>
-                            <h2 className=' text-[#fff] text-[32px] font-[400] h-[35px] max-[750px]:text-[24px] max-[750px]:h-[25px] max-[550px]:text-[20px] max-[350px]:h-[15px] max-[350px]:mb-2 '>Welcome to</h2>
-                            <h1 className='text-[#FFDD00]  text-[64px] font-[700] h-[60px]  max-[1150px]:text-[55px] max-[750px]:text-[45px] max-[750px]:h-[45px] max-[550px]:text-[30px] max-[550px]:h-[35px] max-[350px]:text-[25px] max-[350px]:h-[25px] '>INSTITUTE TECHNICAL </h1>
-                            <h1 className='text-[#FFDD00]  text-[64px] font-[700] h-[85px] max-[1150px]:text-[55px] max-[750px]:text-[45px] max-[750px]:h-[60px] max-[550px]:text-[30px] max-[550px]:h-[40px] max-[350px]:text-[25px] max-[350px]:h-[35px] '>COUNCIL </h1>
-                            <div className=' flex gap-4 mb-4'>
-                                <span className='text-[24px] font-[700] text-[#FFDD00] max-[750px]:text-[18px] max-[550px]:text-[15px]'>Innovate</span>
-                                <span className='text-[24px] font-[700] text-[#fff] max-[750px]:text-[18px] max-[550px]:text-[15px]'>Tinker</span>
-                                <span className='text-[24px] font-[700] text-[#4ae4ff] max-[750px]:text-[18px] max-[550px]:text-[15px]'>Create!</span>
-                            </div>
-                        </div>
-                        <div>
-                            <CountDownEvent EventStartDate="2024-06-27T00:00:00" EventEndDate="2024-06-30T00:00:00" />
-                        </div> */}
+        {/* Hero section  */}
+        <div className="w-[100%] h-[100%] px-[5%]  md:shadow-[inset_0px_0px_1000px_80px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
+          {/* Hero contents  */}
+          <div className="h-full grid items-center w-full bg-gradient-to-r from-black to-transparent select-none ">
+            <div className="space-y-6">
+              <h1 className=" italic text-[#fff] text-4xl  md:text-6xl font-[900] ">
+                Unleash Your Potential <br /> with Tech
+                <span className="text-sky-600">kshitiz</span>
+              </h1>
+              <div className="text-white text-lg">
+                Explore - Innovate - Create
+              </div>
+              <div>
+                {" "}
+                <CountDownEvent
+                  EventStartDate="2024-06-27T00:00:00"
+                  EventEndDate="2024-06-30T00:00:00"
+                />
+              </div>
+            </div>
           </div>
-          <div className="w-[100%] h-[40px] flex justify-center items-center gap-2">
+
+          <div className="w-[100%] flex justify-center items-center gap-2 -mt-6">
             {images.map((imageUrl, index) => (
               <span
                 key={index}
                 style={{ transition: "background-color 1s ease" }}
-                className={`w-[10px] h-[10px] rounded-[50%]  hover:bg-[#fff] ${
-                  index === currentImageIndex ? "bg-[#ffffff]" : "bg-[#747474]"
+                className={`w-[16px] h-[4px] rounded-full  hover:bg-[#fff] ${
+                  index === currentImageIndex ? "bg-sky-600" : "bg-[#ffffff18]"
                 } cursor-pointer`}
                 onClick={() => OnclickSlideImageSet(index)}
               ></span>
@@ -175,31 +180,32 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
           </div>
         </div>
       </div>
-      <EventNotices />
 
-      <section className="bg-[#0d1526] w-[100%] h-[420px] pb-5">
-        <div className="w-[100%] h-[auto] p-[20px] pt-[30px]">
-          <div className="flex justify-center items-center gap-2">
-            <img
-              className="w-[40px] h-[30px] select-none"
-              src={firstWinner}
-              alt="firstWinner"
-            />
-            <h1 className="text-[#FFDD00]   select-none text-[40px]  text-center font-[700]   max-[1024px]:text-[35px] max-[800px]:text-[30px] max-[480px]:text-[25px]">
-              {" "}
-              WINNERS
-            </h1>
-          </div>
+      {/* past event winners section */}
+      <section className="bg-[#0d1526] w-[100%] h-[420px] py-12">
+        {/* heading  */}
+        <div className="">
+          <h1 className="text-sky-600   select-none text-[40px]  text-center font-[700]   max-[1024px]:text-[35px] max-[800px]:text-[30px] max-[480px]:text-[25px]">
+            WINNERS
+          </h1>
+
           <div className="w-[100%] flex justify-center items-center">
-            <hr className="w-[423px]  border-[1px] border-[#FFDD00] rounded-[10px] max-[800px]:w-[300px] max-[480px]:w-[250px]" />
+            <hr
+              className="h-[2px] w-[200px] md:w-[250px] border-none rounded-[10px] bg-gradient-to-r from-transparent via-sky-600 to-transparent"
+              style={{
+                borderImage:
+                  "linear-gradient(to right, transparent, sky-600, transparent)",
+                borderImageSlice: 1,
+              }}
+            />
           </div>
         </div>
-        {IsLoading ? (
-          <div className=" w-[100%] h-[100%] p-[20px]">
-            <Slide />
-          </div>
-        ) : currentImageIndexWinner.length ? (
+        {/* heading:end  */}
+
+        {/* IsLoading */}
+        {!false && currentImageIndexWinner.length ? (
           <>
+            {/* winner profile  */}
             <div className="flex  items-center justify-between w-[100%] h-[auto] p-[10px]">
               <div className="p-[20px] flex justify-center items-center w-[100px]  h-[100%] max-[800px]:hidden">
                 <span
@@ -212,27 +218,26 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
                   keyboard_arrow_left
                 </span>
               </div>
-              <div
-                style={{ transition: "all 1s" }}
-                className="w-[80%] h-[100%] flex gap-6 justify-between max-[1080px]:justify-center max-[800px]:w-[100%] p-[20px]"
-              >
+              {/* winner cards section  */}
+              <div className=" flex gap-6 p-[20px]">
                 {currentImageIndexWinner.map((data, index) => (
                   <>
+                    {/* winner card  */}
                     <div
                       key={index}
                       style={{ transition: "all 0.5s" }}
-                      className=" rounded-sm border-[#121d2a] w-[161px] h-[210px] p-3 cursor-default border-2 hover:border-[#1f3044] hover:shadow-[0px_opx_100px_10px_#1b2a3c]"
+                      className=" snap-x overflow-hidden bg-slate-900 rounded-3xl border-[#162435] w-[150px] h-[210px] p-3 cursor-default border-2 hover:border-[#1f3044] hover:shadow-[0px_opx_100px_10px_#1b2a3c]"
                       onClick={() => OnClickWinnerDataShow(data)}
                     >
-                      <div className="w-[100%] h-[auto] p-[10px] flex justify-center items-center">
+                      <div className=" snap-center w-[100%] p-[10px] flex justify-center items-center">
                         <img
                           src={Object(data).Participant_Avtar}
-                          className="w-[110px] h-[110px] rounded-[50%] select-none"
+                          className="w-[110px] aspect-square rounded-full select-none"
                           alt="winners"
                         />
                       </div>
                       <div className="h-[52px] w-[100%]">
-                        <p className="text-[20px] text-center select-none w-full truncate  font-[700] capitalize text-[#EEEEEE]">
+                        <p className="text-md md:text-lg text-center select-none w-full truncate  font-[700] capitalize text-[#EEEEEE]">
                           {String(Object(data).Participant_Name).substring(
                             0,
                             15
@@ -249,24 +254,26 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
                   </>
                 ))}
               </div>
+              {/* winner cards section:end  */}
               <div className="p-[20px] flex justify-center items-center w-[100px] h-[100%] max-[800px]:hidden">
                 <span
                   style={{ transition: "all 1s" }}
                   onClick={OnHandelNextClick}
                   className={`${
                     SlidePageCalculate > 1 ? "flex" : "hidden"
-                  } material-symbols-outlined  w-[50px] h-[50px] cursor-pointer select-none text-[#fff]  hover:bg-[#1f314b] font-[700] rounded-[50%] flex justify-center items-center border-[2px] border-[#1f314b]`}
+                  } material-symbols-outlined  w-[50px] h-[50px] cursor-pointer text-[#fff]  hover:bg-[#1f314b] font-[700] rounded-[50%] flex justify-center items-center border-[2px] border-[#1f314b]`}
                 >
                   keyboard_arrow_right
                 </span>
               </div>
             </div>
-            <div className="w-[100%] h-[40px] flex justify-center items-center gap-2 mt-4">
+            {/* winner profile:end  */}
+            <div className="w-[100%] h-[40px] flex justify-center items-center gap-2 ">
               {bubbleArray.map((imageUrl, index) => (
                 <span
                   key={index}
                   style={{ transition: "background-color 1s ease" }}
-                  className={`w-[10px] h-[10px] rounded-[50%]  hover:bg-[#fff] ${
+                  className={`w-[16px] h-[2px] rounded-full  hover:bg-[#fff] ${
                     index === SlidePage ? "bg-[#ffffff]" : "bg-[#747474]"
                   } cursor-pointer`}
                   onClick={() => OnclickWinnerSlideImageSet(index)}
@@ -277,7 +284,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
         ) : (
           <div className="w-[100%]  h-[250px] flex justify-center items-center ">
             <h1 className=" uppercase text-[30px] font-[700] text-center animate-pulse text-[#ffdd00] max-[480px]:text-[20px] max-[300px]:text-[12px] max-[700px]:text-[30px] select-none ">
-              No More Winner List🌻🌻
+              Winner not available currently.
             </h1>
           </div>
         )}

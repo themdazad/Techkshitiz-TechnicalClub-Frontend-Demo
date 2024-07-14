@@ -1,4 +1,3 @@
-# Hello Brother from component by azad
 
 # Getting Started with Create React App
 
