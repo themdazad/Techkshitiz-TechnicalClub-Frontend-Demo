@@ -171,7 +171,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
               <span
                 key={index}
                 style={{ transition: "background-color 1s ease" }}
-                className={`w-[16px] h-[4px] rounded-full  hover:bg-[#fff] ${
+                className={`w-[16px] h-[4px] rounded-full  hover:bg-sky-600 ${
                   index === currentImageIndex ? "bg-sky-600" : "bg-[#ffffff18]"
                 } cursor-pointer`}
                 onClick={() => OnclickSlideImageSet(index)}
@@ -203,7 +203,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
         {/* heading:end  */}
 
         {/* IsLoading */}
-        {!false && currentImageIndexWinner.length ? (
+        {IsLoading && currentImageIndexWinner.length ? (
           <>
             {/* winner profile  */}
             <div className="flex  items-center justify-between w-[100%] h-[auto] p-[10px]">
@@ -273,8 +273,8 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
                 <span
                   key={index}
                   style={{ transition: "background-color 1s ease" }}
-                  className={`w-[16px] h-[2px] rounded-full  hover:bg-[#fff] ${
-                    index === SlidePage ? "bg-[#ffffff]" : "bg-[#747474]"
+                  className={`w-[16px] h-[4px] rounded-full  hover:bg-[#fff] ${
+                    index === SlidePage ? "bg-sky-600" : "bg-[#ffffff1a]"
                   } cursor-pointer`}
                   onClick={() => OnclickWinnerSlideImageSet(index)}
                 ></span>
