@@ -124,7 +124,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
       {/* Important announcement Popup Message bar */}
       <EventNotices />
 
-      <div className=" absolute top-[60px]  left-0  w-[100%] h-[600px] max-[750px]:h-[400px] max-[550px]:h-[350px] overflow-hidden z-[-1]">
+      <div className=" absolute top-[60px]  left-0  w-[100%] h-[600px] max-[750px]:h-[400px] max-[600px]:h-[350px] overflow-hidden z-[-1]">
         {images.length > 0 ? (
           images.map((imageUrl, index) => (
             <img
