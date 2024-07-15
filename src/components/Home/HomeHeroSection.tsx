@@ -157,11 +157,9 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
                 Explore - Innovate - Create
               </div>
               <div>
-                {" "}
-                <CountDownEvent
-                  EventStartDate="2024-06-27T00:00:00"
-                  EventEndDate="2024-06-30T00:00:00"
-                />
+              {/* hero section timer button  */}
+              {/* Add event start and end date here */}
+              <CountDownEvent EventStartDate="2024-07-01T00:00:00" EventEndDate="2024-08-01T00:00:00" />
               </div>
             </div>
           </div>

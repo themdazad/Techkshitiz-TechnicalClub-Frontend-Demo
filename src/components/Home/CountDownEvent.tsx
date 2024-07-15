@@ -32,8 +32,10 @@ const CountDownEvent = ({ EventEndDate, EventStartDate }) => {
 
     return (
         <>{
+          // eventIsLive
             !eventIsLive ? (
-                <button type="button" className='cursor-default text-green-600 bg-green-600/20text-[18px]  p-[5px] h-[55.29px] rounded-[30px] border-[2px] border-green-600 flex gap-1 justify-center items-center max-[750px]:w-[200px] max-[750px]:text-[14px] max-[750px]:h-[40px]'>
+                <button type="button" className='cursor-pointer p-4 py-3 text-yellow-400 bg-yellow-600/15 hover:bg-yellow-600/20 text-md  rounded-3xl border-[2px] border-yellow-400 flex gap-1 justify-center items-center '>
+                    <span className='font-[700]'>Upcoming Event |</span>
                     <span className='font-[700]'>{timeLeft["days"] > 9 ? timeLeft["days"] : "0" + timeLeft["days"]} days </span>
                     <span className='font-[700]'>:</span>
                     <span className='font-[700]'>{timeLeft["hours"] > 9 ? timeLeft["hours"] : "0" + timeLeft["hours"]} : {timeLeft["minutes"] > 9 ? timeLeft["minutes"] : "0" + timeLeft["minutes"]} Minutes</span>
@@ -41,13 +43,13 @@ const CountDownEvent = ({ EventEndDate, EventStartDate }) => {
 
             ) : (
                 eventLastDate > 0 ? (
-                    <button type="button" className=' cursor-default text-sky-600 py-2 px-4 bg-sky-600/20  rounded-[30px] border-[2px] border-sky-600 flex gap-1 justify-center items-center'>
-                        <span className=' uppercase font-[700] animate-pulse '>event is going on</span>
+                    <button type="button" className='cursor-pointer p-4 py-3 text-green-600 bg-green-600/15 hover:bg-green-600/20 text-md   rounded-3xl border-[2px] border-green-600 flex gap-1 justify-center items-center '>
+                        <span className=' uppercase font-[700] animate-pulse '>Register Now</span>
                     </button>
 
                 ) : (
 
-                    <button type="button" className=' cursor-default text-red-600 py-2 px-4 bg-red-600/20  rounded-[30px] border-[2px] border-red-600 flex gap-1 justify-center items-center'>
+                    <button type="button" className='cursor-pointer p-4 py-3 text-red-600 bg-red-600/15 hover:bg-red-600/20 text-md rounded-3xl border-[2px] border-red-600 flex gap-1 justify-center items-center '>
                         <span className=' uppercase font-[700] animate-pulse'>event has ended</span>
                     </button>
                 )
