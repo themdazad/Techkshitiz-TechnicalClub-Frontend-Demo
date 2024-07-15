@@ -34,7 +34,7 @@ const CountDownEvent = ({ EventEndDate, EventStartDate }) => {
         <>{
           // eventIsLive
             !eventIsLive ? (
-                <button type="button" className='cursor-pointer p-4 py-3 text-yellow-400 bg-yellow-600/15 hover:bg-yellow-600/20 text-md  rounded-3xl border-[2px] border-yellow-400 flex gap-1 justify-center items-center '>
+                <button type="button" className='cursor-pointer p-4 py-2 text-yellow-400 bg-yellow-600/15 hover:bg-yellow-600/20 text-md  rounded-3xl border-[2px] border-yellow-400 flex gap-1 justify-center items-center '>
                     <span className='font-[700]'>Upcoming Event |</span>
                     <span className='font-[700]'>{timeLeft["days"] > 9 ? timeLeft["days"] : "0" + timeLeft["days"]} days </span>
                     <span className='font-[700]'>:</span>
@@ -43,13 +43,13 @@ const CountDownEvent = ({ EventEndDate, EventStartDate }) => {
 
             ) : (
                 eventLastDate > 0 ? (
-                    <button type="button" className='cursor-pointer p-4 py-3 text-green-600 bg-green-600/15 hover:bg-green-600/20 text-md   rounded-3xl border-[2px] border-green-600 flex gap-1 justify-center items-center '>
+                    <button type="button" className='cursor-pointer p-4 py-2 text-green-600 bg-green-600/15 hover:bg-green-600/20 text-md   rounded-3xl border-[2px] border-green-600 flex gap-1 justify-center items-center '>
                         <span className=' uppercase font-[700] animate-pulse '>Register Now</span>
                     </button>
 
                 ) : (
 
-                    <button type="button" className='cursor-pointer p-4 py-3 text-red-600 bg-red-600/15 hover:bg-red-600/20 text-md rounded-3xl border-[2px] border-red-600 flex gap-1 justify-center items-center '>
+                    <button type="button" className='cursor-pointer p-4 py-2 text-red-600 bg-red-600/15 hover:bg-red-600/20 text-md rounded-3xl border-[2px] border-red-600 flex gap-1 justify-center items-center '>
                         <span className=' uppercase font-[700] animate-pulse'>event has ended</span>
                     </button>
                 )

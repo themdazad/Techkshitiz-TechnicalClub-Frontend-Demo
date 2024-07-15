@@ -2,16 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CountDownEvent from "./CountDownEvent.tsx";
 import Slide from "../Loader/Slide.tsx";
-import ProfessorAndPrincipalPortfolio from "./ProfessorAndPrincipalPortfolio.tsx";
 import EventNotices from "../PopUpMessages/EventNotices.tsx";
 import { useMemo } from "react";
-
+import { ComingSoon } from '../ComingSoon/ComingSoon.tsx';
 function HomeHeroSection({ winnerParticipantData, IsLoading }) {
   const images = useMemo(
     () => [
-      "/images/carousel/slide1.jpeg",
+      "/images/carousel/event_seminar.jpg",
       "/images/carousel/slide2.jpeg",
-      "/images/carousel/slide3.jpeg",
       "/images/carousel/slide4.jpeg",
       "/images/carousel/slide5.jpeg",
       "/images/carousel/slide6.jpeg",
@@ -121,9 +119,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
   };
   return (
     <>
-      {/* Important announcement Popup Message bar */}
-      <EventNotices />
-
+      
       <div className=" absolute top-[60px]  left-0  w-[100%] h-[600px] max-[750px]:h-[400px] max-[600px]:h-[350px] overflow-hidden z-[-1]">
         {images.length > 0 ? (
           images.map((imageUrl, index) => (
@@ -178,6 +174,8 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
           </div>
         </div>
       </div>
+      {/* Important announcement Popup Message bar */}
+      <EventNotices />
 
       {/* past event winners section */}
       <section className="bg-[#0d1526] w-[100%] h-[420px] py-12">
@@ -282,12 +280,12 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
         ) : (
           <div className="w-[100%]  h-[250px] flex justify-center items-center ">
             <h1 className=" uppercase text-[30px] font-[700] text-center animate-pulse text-[#ffdd00] max-[480px]:text-[20px] max-[300px]:text-[12px] max-[700px]:text-[30px] select-none ">
-              Winner not available currently.
+              <ComingSoon text="Winner not available"/>
             </h1>
           </div>
         )}
       </section>
-      <ProfessorAndPrincipalPortfolio />
+      {/* faculty details moved in about page  */}
     </>
   );
 }

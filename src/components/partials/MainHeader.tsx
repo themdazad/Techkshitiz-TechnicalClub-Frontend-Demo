@@ -123,7 +123,7 @@ function MainHeader() {
     OnClickprofileMenu();
   };
   const LogOutParticipant = async () => {
-    const logOutverification = window.confirm("Are you sure to logout ");
+    const logOutverification = window.confirm("Are you sure! ");
     if (logOutverification) {
       try {
         SetIsLoading(true);
@@ -151,9 +151,9 @@ function MainHeader() {
 
   return (
     <>
-      <div className=" w-[100%] h-[60px] z-40 sticky top-0 bg-[#0c0f1e] border-b-[1px] border-[#2b3148] flex justify-center items-center">
+      <div className=" w-[100%] px-[5%] py-2 z-40 sticky top-0 bg-[#0c0f1e] border-b-[1px] border-[#2b3148] flex justify-between items-center">
         <div
-          className={`w-[24%] select-none h-[auto] flex justify-center items-center max-xl:w-[90%] max-xl-[1280px]:pl-6  max-sm:pl-3 ${
+          className={` select-none h-[auto] flex justify-center items-center max-xl:w-[90%] max-xl-[1280px]:pl-6  max-sm:pl-3 ${
             IsLogin ? "max-[700px]:w-[80%]" : ""
           } max-xl:justify-start`}
         >
@@ -162,12 +162,13 @@ function MainHeader() {
             className="flex  object-contain justify-center items-center"
           >
             <img
-              className="h-full w-[120px]"
+              className="h-full w-[100px] lg:w-[150px]"
               src="/images/Techkshitiz_Logo.png"
               alt="TechKshitiz Logo"
             />
           </NavLink>
         </div>
+
         {IsLogin ? (
           <div className="hidden  select-none w-[70px] pr-[10px] h-[100%] max-xl:flex justify-end items-center  ">
             <div
@@ -202,49 +203,50 @@ function MainHeader() {
             </span>
           </div>
         )}
+        
         <nav
           id="mainheader"
           style={{ transition: "all 1s" }}
-          className="w-[76%] navBar h-[100%] flex transition ease-in-out delay-200 justify-center max-xl:h-[100%] max-xl:w-[300px] max-[480px]:w-[250px]     max-xl:bg-[#0c0f1e]     max-xl:fixed top-[60px] left-0   max-xl:left-[-300px] items-center max-[480px]:justify-end overflow-auto max-xl:pl-[20px]   "
+          className=" navBar h-[100%] flex transition  justify-center max-xl:h-[100%] max-xl:w-[300px] max-[480px]:w-[250px]     max-xl:bg-[#0c0f1e]     max-xl:fixed top-[60px] left-0   max-xl:left-[-300px] items-center max-[480px]:justify-end overflow-auto max-xl:pl-[20px]   "
         >
           <ul className="w-[100%] h-[100%] max-[480px]:ml-[20px]   flex justify-center items-center ml:gap-6 mll:gap-8 gap-4 max-xl:gap-4  max-xl:overflow-y-auto  max-xl:w-[250px]  max-[480px]:w-[210px]  max-xl:block">
             <NavLink
               onClick={mainheaderslidehandel}
               to={`/government-engineering-college-siwan/events/bgmi/live-stream`}
-              className="text-[#fff] text-center max-xl:text-start text-[14px] transition-all ease-in-out delay-200 font-[600]  hover:text-[red]"
+              className="text-red-500 animate-pulse text-center max-xl:text-start text-[14px]  font-[600]  hover:text-sky-500"
             >
-              <li className="max-xl:mb-6 max-xl:mt-[24px] ">LIVE STREAM</li>
+              <li className="max-xl:mb-6 max-xl:mt-[24px] ">LIVE</li>
             </NavLink>
             <NavLink
               onClick={mainheaderslidehandel}
               to="/government-engineering-college-siwan/total/events/list"
-              className="text-[#fff] text-center  text-[14px] transition-all max-xl:text-start ease-in-out delay-200 font-[600]  hover:text-[red]"
+              className="text-[#fff] text-center  text-[14px] transition-all max-xl:text-start  font-[600]  hover:text-sky-500"
             >
               <li className="max-xl:mb-6">EVENT</li>
             </NavLink>
             <NavLink
               onClick={mainheaderslidehandel}
               to="/government-engineering-college-siwan/total/clubs/list"
-              className="text-[#fff]  text-center text-[14px] transition-all max-xl:text-start ease-in-out delay-200 font-[600]  hover:text-[red]"
+              className="text-[#fff]  text-center text-[14px] transition-all max-xl:text-start  font-[600]  hover:text-sky-500"
             >
               <li className="max-xl:mb-6"> CLUB</li>
             </NavLink>
             <NavLink
               to="/government-engineering-college-siwan/contest/lists"
-              className="text-[#fff] text-center text-[14px] transition-all max-xl:text-start ease-in-out delay-200 font-[600]  hover:text-[red]"
+              className="text-[#fff] text-center text-[14px] transition-all max-xl:text-start  font-[600]  hover:text-sky-500"
             >
               <li className="max-xl:mb-6">CONTEST</li>
             </NavLink>
             <NavLink
               to="/government-engineering-college-siwan/certificate/"
-              className="text-[#fff] text-center text-[14px] transition-all  max-xl:text-start ease-in-out delay-200 font-[600]  hover:text-[red]"
+              className="text-[#fff] text-center text-[14px] transition-all  max-xl:text-start  font-[600]  hover:text-sky-500"
             >
               <li className="max-xl:mb-6">CERTIFICATE</li>
             </NavLink>
             <div
               onMouseOut={mouseouteffect}
               onMouseOver={mouseovereffect}
-              className="text-[#fff] cursor-pointer  max-xl:w-[80%] max-xl:mt-[20px]     max-xl:flex justify-center max-xl:justify-start items-center text-center text-[14px]  transition-all ease-in-out delay-200 font-[600] h-[auto]  hover:text-[red]"
+              className="text-[#fff] cursor-pointer  max-xl:w-[80%] max-xl:mt-[20px]     max-xl:flex justify-center max-xl:justify-start items-center text-center text-[14px]   font-[600] h-[auto]  hover:text-sky-500"
             >
               <li className="max-xl:mb-6">HALL OF FAME</li>
               <div
@@ -277,35 +279,36 @@ function MainHeader() {
             <NavLink
               onClick={mainheaderslidehandel}
               to="/government-engineering-college-siwan/event/gallery/"
-              className="text-[#fff] text-[14px]  max-xl:text-start    text-center transition-all ease-in-out delay-200 font-[600]  hover:text-[red]"
+              className="text-[#fff] text-[14px]  max-xl:text-start    text-center  font-[600]  hover:text-sky-500"
             >
-              <li className="max-xl:mb-6">EVENTS GALLERY</li>
+              <li className="max-xl:mb-6"> GALLERY</li>
             </NavLink>
-            <NavLink
+            {/* :::uncomment when page will properply ready  */}
+            {/* <NavLink
               onClick={mainheaderslidehandel}
               to="/government-engineering-college-siwan/community"
-              className="text-[#fff] text-center max-xl:text-start text-[14px] transition-all ease-in-out delay-200 font-[600]  hover:text-[red]"
+              className="text-[#fff] text-center max-xl:text-start text-[14px]  font-[600]  hover:text-sky-500"
             >
               <li className="max-xl:mb-6">COMMUNITY</li>
             </NavLink>
             <NavLink
               onClick={mainheaderslidehandel}
               to="/government-engineering-college-siwan/campus/ambassador/internship/"
-              className="text-[#fff] text-center max-xl:text-start text-[14px] transition-all ease-in-out delay-200 font-[600]  hover:text-[red]"
+              className="text-[#fff] text-center max-xl:text-start text-[14px]  font-[600]  hover:text-sky-500"
             >
               <li className="max-xl:mb-6">CA</li>
-            </NavLink>
-
+            </NavLink> */}
+           
             <NavLink
               onClick={mainheaderslidehandel}
               to="/government-engineering-college-siwan/technical-club/contacts"
-              className="text-[#fff] text-center max-xl:text-start text-[14px] transition-all ease-in-out delay-200 font-[600]  hover:text-[red]"
+              className="text-[#fff] text-center max-xl:text-start text-[14px]  font-[600]  hover:text-sky-500"
             >
-              <li className="max-xl:mb-6"> CONTACT US</li>
+              <li className="max-xl:mb-6"> ABOUT</li>
             </NavLink>
 
             {IsLogin ? (
-              <div className="text-[#fff] max-xl:w-[100%] max-xl:flex max-xl:mt-[20px] justify-center max-xl:justify-start max-xl:items-start items-center  text-center text-[14px]   transition-all ease-in-out delay-200 font-[600] h-[auto] max-xl:h-[250px] pr-[10px] ">
+              <div className="text-[#fff] max-xl:w-[100%] max-xl:flex max-xl:mt-[20px] justify-center max-xl:justify-start max-xl:items-start items-center  text-center text-[14px]    font-[600] h-[auto] max-xl:h-[250px] pr-[10px] ">
                 <div
                   onClick={OnClickprofileMenu}
                   className="w-[45px] max-xl:hidden cursor-pointer  h-[45px] rounded-[50%] border-[2px] border-[#2c4056] flex justify-center items-center"
@@ -378,35 +381,35 @@ function MainHeader() {
               <div
                 onMouseOut={mouseouteffectLogin}
                 onMouseOver={mouseovereffectLogin}
-                className="text-[#fff] cursor-pointer max-xl:w-[80%] max-xl:flex max-xl:mt-[20px] justify-center max-xl:justify-start items-center  text-center text-[14px]   transition-all ease-in-out delay-200 font-[600] h-[auto]   hover:text-[red]"
+                className="text-[#fff] cursor-pointer max-xl:w-[80%] max-xl:flex max-xl:mt-[20px] justify-center max-xl:justify-start items-center  text-center text-[14px]  font-[600] h-[auto]   hover:text-sky-600"
               >
-                <li className=" text-center  uppercase  h-[30px] flex items-center  max-xl:hidden ">
+                <li className=" border-2 border-sky-600 bg-sky-600/15 p-4  rounded-3xl text-center  uppercase  h-[30px] flex items-center  max-xl:hidden ">
                   Login
                 </li>
-                <div className="xl:hidden text-[yellow] w-[200px]   h-[auto] pb-[10px]">
+                <div className="xl:hidden text-sky-600 w-[200px]   h-[auto] pb-[10px]">
                   <NavLink
                     onClick={mainheaderslidehandel}
                     to="/government-engineering-college-siwan/student/login"
-                    className=" hover:text-[#f3ff46]  text-[16px]  flex justify-start items-center h-[35px] mb-3  w-[100%]"
+                    className=" hover:text-sky-600  text-[16px]  flex justify-start items-center h-[35px] mb-3  w-[100%]"
                   >
                     Student Login{" "}
                   </NavLink>
                   <NavLink
                     onClick={mainheaderslidehandel}
                     to="/government-engineering-college-siwan/professor/login"
-                    className=" hover:text-[#f3ff46]  text-[16px]  flex justify-start items-center h-[35px]  w-[100%]"
+                    className=" hover:text-sky-600  text-[16px]  flex justify-start items-center h-[35px]  w-[100%]"
                   >
                     Professor Login
                   </NavLink>
                 </div>
                 <div
                   id="login"
-                  className="hidden w-[200px] z-50 h-[auto] pb-[10px] pt-[10px] rounded-[5px]   max-xl:hidden  max-[800px]:right-[10%]   border-[#182739] bg-[#0a121e] border-[1px] absolute right-[1%] top-[43px]"
+                  className="hidden w-[200px] z-50 h-[auto] pb-[10px] pt-[10px] rounded-xl   max-xl:hidden  max-[800px]:right-[10%]   border-[#182739] bg-[#0a121e] border-[1px] absolute right-[1%] top-[43px]"
                 >
                   <div className=" p-[1px] pl-0 pr-0 text-[#fff] ">
                     <NavLink
                       to="/government-engineering-college-siwan/student/login"
-                      className=" hover:text-[#f3ff46]  text-[16px]  flex justify-center items-center h-[35px] hover:bg-[#191e36e1] w-[100%]"
+                      className=" hover:text-sky-600  text-[16px]  flex justify-center items-center h-[35px] hover:bg-[#191e36e1] w-[100%]"
                     >
                       Student Login{" "}
                     </NavLink>
@@ -414,7 +417,7 @@ function MainHeader() {
                   <div className=" p-[1px] pl-0 pr-0 text-[#ffff] ">
                     <NavLink
                       to="/government-engineering-college-siwan/professor/login"
-                      className=" hover:text-[#f3ff46]  text-[16px]  flex justify-center items-center h-[35px] hover:bg-[#191e36e1] w-[100%]"
+                      className=" hover:text-sky-600  text-[16px]  flex justify-center items-center h-[35px] hover:bg-[#191e36e1] w-[100%]"
                     >
                       Professor Login
                     </NavLink>
