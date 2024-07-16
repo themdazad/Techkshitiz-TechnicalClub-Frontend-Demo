@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 let eventIsLive = false;
 const CountDownEvent = ({ EventEndDate, EventStartDate }) => {
     const eventLastDate = Number(new Date(EventEndDate)) - Number(new Date());
@@ -43,8 +44,8 @@ const CountDownEvent = ({ EventEndDate, EventStartDate }) => {
 
             ) : (
                 eventLastDate > 0 ? (
-                    <button type="button" className='cursor-pointer p-4 py-2 text-green-600 bg-green-600/15 hover:bg-green-600/20 text-md   rounded-3xl border-[2px] border-green-600 flex gap-1 justify-center items-center '>
-                        <span className=' uppercase font-[700] animate-pulse '>Register Now</span>
+                    <button type="button" className='cursor-pointer p-4 py-2 text-yellow-400 bg-yellow-400/15 hover:bg-yellow-400/20 text-md   rounded-3xl border-[2px] border-yellow-400 flex gap-1 justify-center items-center '>
+                        <NavLink to={"/government-engineering-college-siwan/total/events/list"} className=' uppercase font-[700] animate-pulse '>Register Now</NavLink>
                     </button>
 
                 ) : (

@@ -141,9 +141,9 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
         className={`  w-[100vw] h-[500px] max-[750px]:h-[400px]  max-[550px]:h-[350px]`}
       >
         {/* Hero section  */}
-        <div className="w-[100%] h-[100%] px-[5%]  md:shadow-[inset_0px_0px_1000px_80px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
+        <div className="w-[100%] h-[100%] px-[5%] bg-gradient-to-r  from-black to-transparent md:shadow-[inset_0px_0px_1000px_80px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
           {/* Hero contents  */}
-          <div className="h-full grid items-center w-full bg-gradient-to-r from-black to-transparent select-none ">
+          <div className="h-full grid items-center w-full">
             <div className="space-y-6">
               <h1 className=" italic text-[#fff] text-4xl  md:text-6xl font-[900] ">
                 Unleash Your Potential <br /> with Tech

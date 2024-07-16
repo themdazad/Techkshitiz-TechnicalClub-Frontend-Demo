@@ -151,7 +151,7 @@ function MainHeader() {
 
   return (
     <>
-      <div className=" w-[100%] px-[5%] py-2 z-40 sticky top-0 bg-[#0c0f1e] border-b-[1px] border-[#2b3148] flex justify-between items-center">
+      <div className=" w-[100%] px-[5%] py-1 z-40 sticky top-0 bg-[#0c0f1e] border-b-[1px] border-[#2b3148] flex justify-between items-center">
         <div
           className={` select-none h-[auto] flex justify-center items-center max-xl:w-[90%] max-xl-[1280px]:pl-6  max-sm:pl-3 ${
             IsLogin ? "max-[700px]:w-[80%]" : ""
@@ -162,7 +162,7 @@ function MainHeader() {
             className="flex  object-contain justify-center items-center"
           >
             <img
-              className="h-full w-[100px] lg:w-[150px]"
+              className="h-full w-[100px] lg:w-[140px]"
               src="/images/Techkshitiz_Logo.png"
               alt="TechKshitiz Logo"
             />

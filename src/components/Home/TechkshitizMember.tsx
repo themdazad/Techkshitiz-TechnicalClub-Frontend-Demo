@@ -287,7 +287,7 @@ const MemberCard = ({ src, name, role }) => {
   return (
     <>
       {/* members details card  */}
-      <div className="py-8 px-8 max-w-sm max-sm:w-full space-y-2 mx-auto bg-sky-600/10 rounded-3xl shadow-lgsm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+      <div className="py-8 px-8 max-w-sm max-sm:w-full space-y-2 mx-auto bg-sky-600/10 rounded-3xl shadow-lg sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
         <img
           className="block aspect-square mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
           src={src}
