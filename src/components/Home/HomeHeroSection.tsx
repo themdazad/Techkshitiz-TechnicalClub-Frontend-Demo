@@ -8,6 +8,7 @@ import { ComingSoon } from '../ComingSoon/ComingSoon.tsx';
 function HomeHeroSection({ winnerParticipantData, IsLoading }) {
   const images = useMemo(
     () => [
+      "/images/carousel/earth_surface.jpg",
       "/images/carousel/event_seminar.jpg",
       "/images/carousel/slide2.jpeg",
       "/images/carousel/slide4.jpeg",
@@ -138,13 +139,13 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
         )}
       </div>
       <div
-        className={`  w-[100vw] h-[500px] max-[750px]:h-[400px]  max-[550px]:h-[350px]`}
+        className={`  w-[100vw] h-[600px] max-[750px]:h-[400px]  max-[550px]:h-[350px]`}
       >
         {/* Hero section  */}
-        <div className="w-[100%] h-[100%] px-[5%] bg-gradient-to-r  from-black to-transparent md:shadow-[inset_0px_0px_1000px_80px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
+        <div className="w-[100%] h-[100%] px-[5%] bg-gradient-to-r  from-black/50 to-transparent md:shadow-[inset_0px_0px_1000px_80px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
           {/* Hero contents  */}
-          <div className="h-full grid items-center w-full">
-            <div className="space-y-6">
+          <div className="h-full grid place-content-center space-y-4 justify-items-center  text-center w-full">
+            
               <h1 className=" italic text-[#fff] text-4xl  md:text-6xl font-[900] ">
                 Unleash Your Potential <br /> with Tech
                 <span className="text-sky-600">kshitiz</span>
@@ -152,12 +153,13 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
               <div className="text-white text-lg">
                 Explore - Innovate - Create
               </div>
-              <div>
+              
               {/* hero section timer button  */}
               {/* Add event start and end date here */}
+              
               <CountDownEvent EventStartDate="2024-07-01T00:00:00" EventEndDate="2024-08-01T00:00:00" />
-              </div>
-            </div>
+              
+              
           </div>
 
           <div className="w-[100%] flex justify-center items-center gap-2 -mt-6">
