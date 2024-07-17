@@ -151,7 +151,7 @@ function MainHeader() {
 
   return (
     <>
-      <div className=" w-[100%] h-[80px] px-[5%] z-40 sticky top-0 bg-slate-950 border-b-[1px] border-white/15 flex justify-between items-center">
+      <div className=" w-[100%] h-[60px] md:h-[80px] px-[5%] z-40 sticky top-0 bg-slate-950 border-b-[1px] border-white/15 flex justify-between items-center">
         <div
           className={`  h-[auto] flex justify-center items-center max-xl:w-[90%] max-xl-[1280px]:pl-6  max-sm:pl-3 ${
             IsLogin ? "max-[700px]:w-[80%]" : ""
@@ -197,7 +197,7 @@ function MainHeader() {
             <span
               id="menuButton"
               onClick={mainheaderslidehandel}
-              className=" material-symbols-outlined text-[#ffffff] font-[800] rounded-[10px]   max-[480px]:text-[30px]   text-[35px] cursor-pointer"
+              className=" material-symbols-outlined text-[#ffffff] font-[800] rounded-[10px]  max-[480px]:text-[32px]   text-[28px] cursor-pointer"
             >
               {MenuBarOn ? "close" : "menu"}
             </span>
