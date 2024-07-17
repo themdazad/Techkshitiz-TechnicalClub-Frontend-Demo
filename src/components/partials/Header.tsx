@@ -65,7 +65,7 @@ const Header = (props) => {
   }
   return (
     <>
-      <div className=" select-none w-[100%] h-[60px] sticky top-0 z-50 bg-[#132831] flex justify-center items-center">
+      <div className="  w-[100%] h-[60px] sticky top-0 z-50 bg-[#132831] flex justify-center items-center">
         <div className="w-[60%] h-[100%] bg-[#132831] flex justify-start items-center">
           <div className="w-[275px] h-[100%] flex justify-center items-center">
             <NavLink to="#" className="flex  pl-36 justify-center items-center">

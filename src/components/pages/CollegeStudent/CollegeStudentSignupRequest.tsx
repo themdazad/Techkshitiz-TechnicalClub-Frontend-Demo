@@ -516,7 +516,7 @@ const CollegeStudentSignupRequest = () => {
               <button
                 type="submit"
                 style={{ transition: "all 0.6s" }}
-                className=" p-[11px] border-2 border-[#162935] select-none  bg-[#11212b] w-[250px] rounded-[10px] hover:bg-[#46d95f] hover:text-[#0e1c24] text-[#fff] font-[700]"
+                className=" p-[11px] border-2 border-[#162935]   bg-[#11212b] w-[250px] rounded-[10px] hover:bg-[#46d95f] hover:text-[#0e1c24] text-[#fff] font-[700]"
               >
                 Send Id Request
               </button>

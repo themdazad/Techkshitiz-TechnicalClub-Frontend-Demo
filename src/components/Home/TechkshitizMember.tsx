@@ -16,7 +16,7 @@ export const TechkshitizMember = () => {
     <div className="bg-[#0d1526]  w-full h-auto  flex flex-col ">
       {/* Principal's Message: */}
       <section className="principal-message my-12 bg-[#0d1526] flex gap-[200px]  justify-center items-center max-xl:flex-col  max-md:p-0 max-xl:gap-8 max-lg:gap-4">
-        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 select-none">
+        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 ">
           <img
             className="w-[330px] h-[350px] rounded-3xl hover:bg-[#1f314b] max-lg:w-[250px] max-lg:h-[280px] max-sm:w-[280px] max-sm:h-[300px]"
             src={PrincipalImages}
@@ -96,7 +96,7 @@ const ClubIncharge = () => {
         />
       </div>
       {/* <div className="mb-12 h-[auto] bg-[#0d1526] flex gap-6  max-w-[1440px] max-sm:w-full m-auto  p-10 pt-0 pb-0  max-xl:flex-col  max-md:p-0 max-xl:gap-8 max-lg:gap-4">
-        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 select-none">
+        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 ">
           <img
             className="w-[330px] h-[350px] rounded-[20px] max-lg:w-[250px] max-lg:h-[280px] max-sm:w-[280px] max-sm:h-[300px]"
             src={SundramMishra}
@@ -106,7 +106,7 @@ const ClubIncharge = () => {
             Prof. Sundram Mishra
           </h1>
         </div>
-        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 select-none">
+        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 ">
           <img
             className="w-[330px] h-[350px] rounded-[20px] max-lg:w-[250px] max-lg:h-[280px] max-sm:w-[280px] max-sm:h-[300px]"
             src={YamikaPatel}
@@ -116,7 +116,7 @@ const ClubIncharge = () => {
             Prof. Yamika Patel
           </h1>
         </div>
-        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 select-none">
+        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 ">
           <img
             className="w-[330px] h-[350px] rounded-[20px] max-lg:w-[250px] max-lg:h-[280px] max-sm:w-[280px] max-sm:h-[300px]"
             src={MohitPrakash}

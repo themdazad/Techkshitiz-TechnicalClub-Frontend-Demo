@@ -121,7 +121,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
   return (
     <>
       
-      <div className=" absolute top-[60px]  left-0  w-[100%] h-[600px] max-[750px]:h-[400px] max-[600px]:h-[350px] overflow-hidden z-[-1]">
+      <div className=" absolute top-[80px]  left-0  w-[100%] h-[600px] max-[750px]:h-[400px] max-[600px]:h-[350px] overflow-hidden z-[-1]">
         {images.length > 0 ? (
           images.map((imageUrl, index) => (
             <img
@@ -142,7 +142,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
         className={`  w-[100vw] h-[600px] max-[750px]:h-[400px]  max-[550px]:h-[350px]`}
       >
         {/* Hero section  */}
-        <div className="w-[100%] h-[100%] px-[5%] bg-gradient-to-r  from-black/50 to-transparent md:shadow-[inset_0px_0px_1000px_80px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
+        <div className="w-[100%] h-[100%] px-[5%]  bg-black/60 md:shadow-[inset_0px_0px_1000px_80px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
           {/* Hero contents  */}
           <div className="h-full grid place-content-center space-y-4 justify-items-center  text-center w-full">
             
@@ -183,7 +183,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
       <section className="bg-[#0d1526] w-[100%] h-[420px] py-12">
         {/* heading  */}
         <div className="">
-          <h1 className="text-sky-600   select-none text-[40px]  text-center font-[700]   max-[1024px]:text-[35px] max-[800px]:text-[30px] max-[480px]:text-[25px]">
+          <h1 className="text-sky-600    text-[40px]  text-center font-[700]   max-[1024px]:text-[35px] max-[800px]:text-[30px] max-[480px]:text-[25px]">
             WINNERS
           </h1>
 
@@ -211,7 +211,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
                   onClick={OnHandelPreviousClick}
                   className={`${
                     SlidePageCalculate > 1 ? "flex" : "hidden"
-                  } material-symbols-outlined w-[50px] h-[50px]  cursor-pointer text-[#fff] select-none  hover:bg-[#1f314b] font-[700]  rounded-[50%]   justify-center items-center border-[2px] border-[#1f314b]`}
+                  } material-symbols-outlined w-[50px] h-[50px]  cursor-pointer text-[#fff]   hover:bg-[#1f314b] font-[700]  rounded-[50%]   justify-center items-center border-[2px] border-[#1f314b]`}
                 >
                   keyboard_arrow_left
                 </span>
@@ -230,18 +230,18 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
                       <div className=" snap-center w-[100%] p-[10px] flex justify-center items-center">
                         <img
                           src={Object(data).Participant_Avtar}
-                          className="w-[110px] aspect-square rounded-full select-none"
+                          className="w-[110px] aspect-square rounded-full "
                           alt="winners"
                         />
                       </div>
                       <div className="h-[52px] w-[100%]">
-                        <p className="text-md md:text-lg text-center select-none w-full truncate  font-[700] capitalize text-[#EEEEEE]">
+                        <p className="text-md md:text-lg text-center  w-full truncate  font-[700] capitalize text-[#EEEEEE]">
                           {String(Object(data).Participant_Name).substring(
                             0,
                             15
                           )}
                         </p>
-                        <p className="text-[15px] w-full truncate text-center select-none font-[400] capitalize text-[#DFDFDF]">
+                        <p className="text-[15px] w-full truncate text-center  font-[400] capitalize text-[#DFDFDF]">
                           {String(
                             Object(data).Participant_Event_Name
                           ).substring(0, 12)}{" "}
@@ -281,7 +281,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
           </>
         ) : (
           <div className="w-[100%]  h-[250px] flex justify-center items-center ">
-            <h1 className=" uppercase text-[30px] font-[700] text-center animate-pulse text-[#ffdd00] max-[480px]:text-[20px] max-[300px]:text-[12px] max-[700px]:text-[30px] select-none ">
+            <h1 className=" uppercase text-[30px] font-[700] text-center animate-pulse text-[#ffdd00] max-[480px]:text-[20px] max-[300px]:text-[12px] max-[700px]:text-[30px]  ">
               <ComingSoon text="Winner not available"/>
             </h1>
           </div>
