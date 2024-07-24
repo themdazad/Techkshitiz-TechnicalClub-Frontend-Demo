@@ -50,7 +50,7 @@ const TechKshitizUserPublicProfile = () => {
             <section className='w-full h-[100vh] bg-[#0f1526] text-[#fff] overflow-auto'>
                 <MainHeader />
                 <div className='w-full h-auto'>
-                    <div id="TechKshitizUserPublicProfile" className='w-full h-[auto] select-none  mb-4 shadow-[inset_0px_0px_200px_100px_#1a202c] ' >
+                    <div id="TechKshitizUserPublicProfile" className='w-full h-[auto]   mb-4 shadow-[inset_0px_0px_200px_100px_#1a202c] ' >
                         <div className=' w-full h-full bg-[#0f152676] p-3 pt-14 pb-8'>
                             <div className='w-full h-[150px] flex justify-center items-center'>
                                 <img className='w-[150px] h-[150px] rounded-full bg-[#0f152664] flex justify-center items-center' src={Object(TechKshitizUserData)?.participant_Profile_Avtar ? Object(TechKshitizUserData)?.participant_Profile_Avtar : Object(location).Participant_Avtar ? Object(location).Participant_Avtar : Object(TechKshitizUserData)?.participant_Avtar} alt="User" />

@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import CatrasoAnimationLoading from "../Loader/CatrasoAnimationLoading.tsx";
-import ClubLogo from '../images/TechKshitiz.png';
-const baseUrl = process.env.REACT_APP_BACKEND_URL
+const baseUrl = process.env.REACT_APP_BACKEND_URL;
 const Header = (props) => {
   const navigate = useNavigate();
   const [Isloader, SetLoader] = useState(false);
@@ -33,24 +32,24 @@ const Header = (props) => {
         });
         if (res.status === 200) {
           SetLoader(false);
-          localStorage.removeItem('Auth_participant_Data')
+          localStorage.removeItem("Auth_participant_Data");
           if (props.datas.EventSelectParticipant === "quiz") {
             navigate("/Quiz/contest/end/thanks/message");
             toast.success("Logout sucessfully Done");
-            localStorage.removeItem('timercoding');
-            localStorage.removeItem('timer');
-            localStorage.removeItem('Mcq_Question');
-            localStorage.removeItem('Coding_Participant_Auth_Data');
+            localStorage.removeItem("timercoding");
+            localStorage.removeItem("timer");
+            localStorage.removeItem("Mcq_Question");
+            localStorage.removeItem("Coding_Participant_Auth_Data");
             sessionStorage.clear();
 
             return;
           } else if (props.datas.EventSelectParticipant === "coding") {
             navigate("/coding/contest/end/thanks/message");
             toast.success("Logout sucessfully Done");
-            localStorage.removeItem('timercoding');
-            localStorage.removeItem('Coding_Participant_Auth_Data');
-            localStorage.removeItem('timer');
-            localStorage.removeItem('Mcq_Question');
+            localStorage.removeItem("timercoding");
+            localStorage.removeItem("Coding_Participant_Auth_Data");
+            localStorage.removeItem("timer");
+            localStorage.removeItem("Mcq_Question");
             sessionStorage.clear();
             return;
           }
@@ -61,21 +60,25 @@ const Header = (props) => {
     }
   };
   if (Isloader) {
-    return <CatrasoAnimationLoading />
+    return <CatrasoAnimationLoading />;
   }
   return (
     <>
-      <div className=" select-none w-[100%] h-[60px] sticky top-0 z-50 bg-[#132831] flex justify-center items-center">
+      <div className="  w-[100%] h-[60px] sticky top-0 z-50 bg-[#132831] flex justify-center items-center">
         <div className="w-[60%] h-[100%] bg-[#132831] flex justify-start items-center">
           <div className="w-[275px] h-[100%] flex justify-center items-center">
             <NavLink to="#" className="flex  pl-36 justify-center items-center">
               <div className=" w-[250px] h-[100%] flex justify-center items-center  max-xl:w-[240px]    max-[800px]:w-[200px]">
-                <img
-                  src={ClubLogo}
-                  // max-[800px]:w-[40px] max-[800px]:h-[34px]
-                  className="w-[250px] h-[40px]  max-xl:w-[240px]   max-sm:w-[200px] "
-                  alt="Loading.."
-                />
+                <NavLink
+                  to=""
+                  className="flex  object-contain justify-center items-center"
+                >
+                  <img
+                    className="h-full w-[100px] lg:w-[120px]"
+                    src="/images/Techkshitiz_Logo.png"
+                    alt="TechKshitiz Logo"
+                  />
+                </NavLink>
               </div>
               {/* <h1 className=" text-[30px] font-[700] text-[#fff] uppercase max-[800px]:text-[25px] max-[480px]:text-[20px]">
               techkshitiz

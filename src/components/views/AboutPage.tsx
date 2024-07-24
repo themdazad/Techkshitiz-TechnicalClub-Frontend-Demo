@@ -7,6 +7,8 @@ import AnnualSport from '../images/AnnualSport.jpeg';
 function AboutPage() {
     return (
         <>
+          
+        
             <div className='w-[100%] h-[auto] p-[10px] bg-[#0d1526]'>
                 <div className='w-[100%] h-[30px] mt-[40px] flex justify-center items-center'><h1 className='text-[#fff] text-[34px] font-[700]'>ABOUT EVENT</h1></div>
                 <div className='w-[100%] h-[90px] flex justify-center mb-2 items-center'><h2 className='text-[#fff] text-[28px] font-[500]'>Find Out More About <NavLink to='/' className='text-[36px] text-[#d5337f] cursor-pointer'>Techkriti</NavLink></h2></div>
