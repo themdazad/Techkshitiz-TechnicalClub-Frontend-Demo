@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CountDownEvent from "./CountDownEvent.tsx";
-import Slide from "../Loader/Slide.tsx";
+// import Slide from "../Loader/Slide.tsx";
 import EventNotices from "../PopUpMessages/EventNotices.tsx";
 import { useMemo } from "react";
-import { ComingSoon } from '../ComingSoon/ComingSoon.tsx';
+// import { ComingSoon } from "../ComingSoon/ComingSoon.tsx";
 function HomeHeroSection({ winnerParticipantData, IsLoading }) {
   const images = useMemo(
     () => [
       "/images/carousel/earth_surface.jpg",
-      "/images/carousel/event_seminar.jpg",
       "/images/carousel/slide2.jpeg",
       "/images/carousel/slide4.jpeg",
       "/images/carousel/slide5.jpeg",
@@ -120,8 +119,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
   };
   return (
     <>
-      
-      <div className=" absolute top-[80px]  left-0  w-[100%] h-[600px] max-[750px]:h-[400px] max-[600px]:h-[350px] overflow-hidden z-[-1]">
+      <div className=" absolute md:top-[60px] top-[50px]  left-0  w-[100%] h-[600px] max-[750px]:h-[400px] max-[600px]:h-[350px] overflow-hidden z-[-1]">
         {images.length > 0 ? (
           images.map((imageUrl, index) => (
             <img
@@ -142,24 +140,24 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
         className={`  w-[100vw] h-[600px] max-[750px]:h-[400px]  max-[550px]:h-[350px]`}
       >
         {/* Hero section  */}
-        <div className="w-[100%] h-[100%] px-[5%]  bg-black/60 md:shadow-[inset_0px_0px_1000px_80px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
+        <div className="w-[100%] h-[100%] px-[5%]   md:shadow-[inset_0px_0px_255px_150px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
           {/* Hero contents  */}
           <div className="h-full grid place-content-center space-y-4 justify-items-center  text-center w-full">
-            
-              <h1 className=" italic text-[#fff] text-4xl  md:text-6xl font-[900] ">
-                Unleash Your Potential <br /> with Tech
-                <span className="text-sky-600">kshitiz</span>
-              </h1>
-              <div className="text-white text-lg">
-                Explore - Innovate - Create
-              </div>
-              
-              {/* hero section timer button  */}
-              {/* Add event start and end date here */}
-              
-              <CountDownEvent EventStartDate="2024-07-01T00:00:00" EventEndDate="2024-08-01T00:00:00" />
-              
-              
+            <h1 className=" italic text-[#fff] text-4xl  md:text-6xl font-[900] ">
+              Unleash Your Potential <br /> with Tech
+              <span className="text-sky-600">kshitiz</span>
+            </h1>
+            <div className="text-white text-lg">
+              Explore - Innovate - Create
+            </div>
+
+            {/* hero section timer button  */}
+            {/* Add event start and end date here */}
+
+            <CountDownEvent
+              EventStartDate="2024-07-01T00:00:00"
+              EventEndDate="2024-08-01T00:00:00"
+            />
           </div>
 
           <div className="w-[100%] flex justify-center items-center gap-2 -mt-6">
@@ -201,91 +199,90 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
         {/* heading:end  */}
 
         {/* IsLoading */}
-        {IsLoading && currentImageIndexWinner.length ? (
-          <>
-            {/* winner profile  */}
-            <div className="flex  items-center justify-between w-[100%] h-[auto] p-[10px]">
-              <div className="p-[20px] flex justify-center items-center w-[100px]  h-[100%] max-[800px]:hidden">
-                <span
-                  style={{ transition: "all 1s" }}
-                  onClick={OnHandelPreviousClick}
-                  className={`${
-                    SlidePageCalculate > 1 ? "flex" : "hidden"
-                  } material-symbols-outlined w-[50px] h-[50px]  cursor-pointer text-[#fff]   hover:bg-[#1f314b] font-[700]  rounded-[50%]   justify-center items-center border-[2px] border-[#1f314b]`}
-                >
-                  keyboard_arrow_left
-                </span>
-              </div>
-              {/* winner cards section  */}
-              <div className=" flex gap-6 p-[20px]">
-                {currentImageIndexWinner.map((data, index) => (
-                  <>
-                    {/* winner card  */}
-                    <div
-                      key={index}
-                      style={{ transition: "all 0.5s" }}
-                      className=" snap-x overflow-hidden bg-slate-900 rounded-3xl border-[#162435] w-[150px] h-[210px] p-3 cursor-default border-2 hover:border-[#1f3044] hover:shadow-[0px_opx_100px_10px_#1b2a3c]"
-                      onClick={() => OnClickWinnerDataShow(data)}
-                    >
-                      <div className=" snap-center w-[100%] p-[10px] flex justify-center items-center">
-                        <img
-                          src={Object(data).Participant_Avtar}
-                          className="w-[110px] aspect-square rounded-full "
-                          alt="winners"
-                        />
-                      </div>
-                      <div className="h-[52px] w-[100%]">
-                        <p className="text-md md:text-lg text-center  w-full truncate  font-[700] capitalize text-[#EEEEEE]">
-                          {String(Object(data).Participant_Name).substring(
-                            0,
-                            15
-                          )}
-                        </p>
-                        <p className="text-[15px] w-full truncate text-center  font-[400] capitalize text-[#DFDFDF]">
-                          {String(
-                            Object(data).Participant_Event_Name
-                          ).substring(0, 12)}{" "}
-                          {Object(data).Participant_Event_Year}
-                        </p>
-                      </div>
-                    </div>
-                  </>
-                ))}
-              </div>
-              {/* winner cards section:end  */}
-              <div className="p-[20px] flex justify-center items-center w-[100px] h-[100%] max-[800px]:hidden">
-                <span
-                  style={{ transition: "all 1s" }}
-                  onClick={OnHandelNextClick}
-                  className={`${
-                    SlidePageCalculate > 1 ? "flex" : "hidden"
-                  } material-symbols-outlined  w-[50px] h-[50px] cursor-pointer text-[#fff]  hover:bg-[#1f314b] font-[700] rounded-[50%] flex justify-center items-center border-[2px] border-[#1f314b]`}
-                >
-                  keyboard_arrow_right
-                </span>
-              </div>
+        {/* {IsLoading && currentImageIndexWinner.length ? ( */}
+        {/* {IsLoading? ( */}
+        <>
+          {/* winner profile  */}
+          <div className="flex  items-center justify-between w-[100%] h-[auto] p-[10px]">
+            <div className="p-[20px] flex justify-center items-center w-[100px]  h-[100%] max-[800px]:hidden">
+              <span
+                style={{ transition: "all 1s" }}
+                onClick={OnHandelPreviousClick}
+                className={`${
+                  SlidePageCalculate > 1 ? "flex" : "hidden"
+                } material-symbols-outlined w-[50px] h-[50px]  cursor-pointer text-[#fff]   hover:bg-[#1f314b] font-[700]  rounded-[50%]   justify-center items-center border-[2px] border-[#1f314b]`}
+              >
+                keyboard_arrow_left
+              </span>
             </div>
-            {/* winner profile:end  */}
-            <div className="w-[100%] h-[40px] flex justify-center items-center gap-2 ">
-              {bubbleArray.map((imageUrl, index) => (
-                <span
-                  key={index}
-                  style={{ transition: "background-color 1s ease" }}
-                  className={`w-[16px] h-[4px] rounded-full  hover:bg-[#fff] ${
-                    index === SlidePage ? "bg-sky-600" : "bg-[#ffffff1a]"
-                  } cursor-pointer`}
-                  onClick={() => OnclickWinnerSlideImageSet(index)}
-                ></span>
+            {/* winner cards section  */}
+            <div className=" flex gap-6 p-[20px]">
+              {currentImageIndexWinner.map((data, index) => (
+                <>
+                  {/* winner card  */}
+                  <div
+                    key={index}
+                    style={{ transition: "all 0.5s" }}
+                    className=" snap-x overflow-hidden bg-slate-900 rounded-3xl border-[#162435] w-[150px] h-[210px] p-3 cursor-default border-2 hover:border-[#1f3044] hover:shadow-[0px_opx_100px_10px_#1b2a3c]"
+                    onClick={() => OnClickWinnerDataShow(data)}
+                  >
+                    <div className=" snap-center w-[100%] p-[10px] flex justify-center items-center">
+                      <img
+                        src={Object(data).Participant_Avtar}
+                        className="w-[110px] aspect-square rounded-full "
+                        alt="winners"
+                      />
+                    </div>
+                    <div className="h-[52px] w-[100%]">
+                      <p className="text-md md:text-lg text-center  w-full truncate  font-[700] capitalize text-[#EEEEEE]">
+                        {String(Object(data).Participant_Name).substring(0, 15)}
+                      </p>
+                      <p className="text-[15px] w-full truncate text-center  font-[400] capitalize text-[#DFDFDF]">
+                        {String(Object(data).Participant_Event_Name).substring(
+                          0,
+                          12
+                        )}{" "}
+                        {Object(data).Participant_Event_Year}
+                      </p>
+                    </div>
+                  </div>
+                </>
               ))}
             </div>
-          </>
-        ) : (
+            {/* winner cards section:end  */}
+            <div className="p-[20px] flex justify-center items-center w-[100px] h-[100%] max-[800px]:hidden">
+              <span
+                style={{ transition: "all 1s" }}
+                onClick={OnHandelNextClick}
+                className={`${
+                  SlidePageCalculate > 1 ? "flex" : "hidden"
+                } material-symbols-outlined  w-[50px] h-[50px] cursor-pointer text-[#fff]  hover:bg-[#1f314b] font-[700] rounded-[50%] flex justify-center items-center border-[2px] border-[#1f314b]`}
+              >
+                keyboard_arrow_right
+              </span>
+            </div>
+          </div>
+          {/* winner profile:end  */}
+          <div className="w-[100%] h-[40px] flex justify-center items-center gap-2 ">
+            {bubbleArray.map((imageUrl, index) => (
+              <span
+                key={index}
+                style={{ transition: "background-color 1s ease" }}
+                className={`w-[16px] h-[4px] rounded-full  hover:bg-[#fff] ${
+                  index === SlidePage ? "bg-sky-600" : "bg-[#ffffff1a]"
+                } cursor-pointer`}
+                onClick={() => OnclickWinnerSlideImageSet(index)}
+              ></span>
+            ))}
+          </div>
+        </>
+        {/* ) : (
           <div className="w-[100%]  h-[250px] flex justify-center items-center ">
             <h1 className=" uppercase text-[30px] font-[700] text-center animate-pulse text-[#ffdd00] max-[480px]:text-[20px] max-[300px]:text-[12px] max-[700px]:text-[30px]  ">
               <ComingSoon text="Winner not available"/>
             </h1>
           </div>
-        )}
+        )} */}
       </section>
       {/* faculty details moved in about page  */}
     </>

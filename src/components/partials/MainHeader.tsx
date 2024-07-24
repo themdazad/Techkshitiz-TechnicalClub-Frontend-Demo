@@ -151,7 +151,7 @@ function MainHeader() {
 
   return (
     <>
-      <div className=" w-[100%] h-[60px] md:h-[80px] px-[5%] z-40 sticky top-0 bg-slate-950 border-b-[1px] border-white/15 flex justify-between items-center">
+      <div className=" w-[100%] h-[50px] md:h-[60px] px-[5%] z-40 sticky top-0 bg-slate-950 border-b-[1px] border-white/15 flex justify-between items-center">
         <div
           className={`  h-[auto] flex justify-center items-center max-xl:w-[90%] max-xl-[1280px]:pl-6  max-sm:pl-3 ${
             IsLogin ? "max-[700px]:w-[80%]" : ""
@@ -162,7 +162,7 @@ function MainHeader() {
             className="flex  object-contain justify-center items-center"
           >
             <img
-              className="h-full w-[100px] lg:w-[140px]"
+              className="h-full w-[100px] lg:w-[120px]"
               src="/images/Techkshitiz_Logo.png"
               alt="TechKshitiz Logo"
             />
@@ -207,7 +207,7 @@ function MainHeader() {
         <nav
           id="mainheader"
           style={{ transition: "all 1s" }}
-          className=" navBar  h-[100%] flex transition  justify-center max-xl:h-[100%] max-xl:w-[300px] max-[480px]:w-[250px]     max-xl:bg-[#0c0f1e]     max-xl:fixed top-[60px] left-0   max-xl:left-[-300px] items-center max-[480px]:justify-end overflow-auto max-xl:pl-[20px]   "
+          className=" navBar  h-[100%] flex transition  justify-center max-xl:h-[100%] max-xl:w-[300px] max-[480px]:w-[250px]     max-xl:bg-[#0c0f1e]     max-xl:fixed top-[50px] md:top-[60px]   left-0   max-xl:left-[-300px] items-center max-[480px]:justify-end overflow-auto max-xl:pl-[20px]   "
         >
           <ul className="w-[100%] h-[100%] max-[480px]:ml-[20px]   flex justify-center items-center lg:space-x-6 max-xl:overflow-y-auto  max-xl:w-[250px]  max-[480px]:w-[210px]  max-xl:block">
             <NavLink

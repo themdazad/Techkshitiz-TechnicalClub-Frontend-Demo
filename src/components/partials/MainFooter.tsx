@@ -11,16 +11,16 @@ import { NavLink } from "react-router-dom";
 
 function MainFooter() {
   return (
-    <footer className="bg-sky-900 text-white border-t-[1px] border-[#182746] flex flex-wrap-reverse justify-center max-sm:text-center md:justify-between items-center py-4  px-[5%] max-sm:gap-4">
+    <footer className="bg-[#020617] text-white border-t-[1px] border-[#182746] flex flex-wrap-reverse justify-center max-sm:text-center md:justify-between items-center py-4  px-[5%] max-sm:gap-4">
       <p className="text-sm">
         Techkshitiz {new Date().getFullYear()}, ©Copyright reserved.
         <br />
         Maintained with <span className="text-red-600">❤</span> By{" "}
-        <NavLink className="font-semibold text-yellow-400" to="/">
+        <NavLink className="font-semibold text-[#ece528cf]" to="/">
           Technical Club, GEC Siwan
         </NavLink>
       </p>
-      <div className="icons flex items-center space-x-4 text-2xl">
+      <div className="icons flex items-center space-x-4 text-xl">
         <NavLink to="mailto:techkshitiz.in@gmail.com" target="_blank">
           <MdEmail />
         </NavLink>
