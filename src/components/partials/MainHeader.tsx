@@ -257,7 +257,7 @@ function MainHeader() {
                   <div key={index} className=" p-[1px] pl-0 pr-0 text-[#fff] ">
                     <NavLink
                       to={`/government-engineering-college-siwan/hall-of-fame?year=${element}`}
-                      className=" hover:text-[#f3ff46]  text-[16px]  flex justify-center items-center h-[35px] hover:bg-[#191e36e1] w-[100%]"
+                      className=" hover:text-sky-600  text-[16px]  flex justify-center items-center h-[35px] hover:bg-[#191e36e1] w-[100%]"
                     >
                       {element}
                     </NavLink>
@@ -266,7 +266,7 @@ function MainHeader() {
                 <div className=" text-[#fff] p-[6px]  pl-0 pr-0 flex justify-center items-center  ">
                   <NavLink
                     to="/government-engineering-college-siwan/hall-of-fame/?type=hall-of-fame&year=all"
-                    className=" hover:text-[#f3ff46]  flex justify-center items-center gap-2 h-[35px] text-[16px] hover:bg-[#191e36e1] w-[100%]"
+                    className=" hover:text-sky-600  flex justify-center items-center gap-2 h-[35px] text-[16px] hover:bg-[#191e36e1] w-[100%]"
                   >
                     More Year{" "}
                     <span className="material-symbols-outlined text-[20px] ">

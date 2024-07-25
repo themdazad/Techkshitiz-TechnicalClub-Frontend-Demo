@@ -13,7 +13,7 @@ const MohitPrakash = "/images/faculty/mohitprakash.jpg";
 
 export const TechkshitizMember = () => {
   return (
-    <div className="bg-[#0d1526]  w-full h-auto  flex flex-col ">
+    <div className="bg-[#0d1526] px-[5%]  w-full h-auto  flex flex-col ">
       {/* Principal's Message: */}
       <section className="principal-message my-12 bg-[#0d1526] flex gap-[200px]  justify-center items-center max-xl:flex-col  max-md:p-0 max-xl:gap-8 max-lg:gap-4">
         <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 ">
@@ -56,7 +56,7 @@ export const TechkshitizMember = () => {
 
       <ClubIncharge />
       <CoreTeam />
-      {/* <ClubMember /> */}
+      
     </div>
   );
 };
@@ -64,7 +64,7 @@ export const TechkshitizMember = () => {
 // Club Incharge Details
 const ClubIncharge = () => {
   return (
-    <section className=" px-[5%] club_incharge">
+    <section className="club_incharge">
       <div className="club_incharge_heading max-w-max">
         <h1 className="font-[700] text-[40px] p-1 text-sky-600 max-sm-m:text-[30px]">
           Club Incharge
@@ -78,7 +78,8 @@ const ClubIncharge = () => {
           }}
         />
       </div>
-      <div className="w-full space-y-4 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-6">
+
+      <div className="gap-4 grid justify-stretch lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-6">
         <MemberCard
           src={SundramMishra}
           name="Prof. Sundram Mishra"
@@ -94,39 +95,9 @@ const ClubIncharge = () => {
           name="Prof. Mohit Prakash"
           role="Electrical Engineering"
         />
+      
       </div>
-      {/* <div className="mb-12 h-[auto] bg-[#0d1526] flex gap-6  max-w-[1440px] max-sm:w-full m-auto  p-10 pt-0 pb-0  max-xl:flex-col  max-md:p-0 max-xl:gap-8 max-lg:gap-4">
-        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 ">
-          <img
-            className="w-[330px] h-[350px] rounded-[20px] max-lg:w-[250px] max-lg:h-[280px] max-sm:w-[280px] max-sm:h-[300px]"
-            src={SundramMishra}
-            alt="Faculty"
-          />
-          <h1 className="text-[#FFFFFF] text-[22px] leading-[30px] font-[700] mt-5 max-md:mt-0">
-            Prof. Sundram Mishra
-          </h1>
-        </div>
-        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 ">
-          <img
-            className="w-[330px] h-[350px] rounded-[20px] max-lg:w-[250px] max-lg:h-[280px] max-sm:w-[280px] max-sm:h-[300px]"
-            src={YamikaPatel}
-            alt="YamikaPatel"
-          />
-          <h1 className="text-[#FFFFFF] text-[22px] leading-[30px] font-[700] mt-5 max-md:mt-0">
-            Prof. Yamika Patel
-          </h1>
-        </div>
-        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 ">
-          <img
-            className="w-[330px] h-[350px] rounded-[20px] max-lg:w-[250px] max-lg:h-[280px] max-sm:w-[280px] max-sm:h-[300px]"
-            src={MohitPrakash}
-            alt="Faculty"
-          />
-          <h1 className="text-[#FFFFFF] text-[22px] leading-[30px] font-[700] mt-5 max-md:mt-0">
-            Prof. Mohit Prakash
-          </h1>
-        </div>
-      </div> */}
+    
     </section>
   );
 };
@@ -134,7 +105,7 @@ const ClubIncharge = () => {
 // Developer Members Details
 const CoreTeam = () => {
   return (
-    <section className="club_member px-[5%] py-12 text-white">
+    <section className="club_member py-12 text-white">
       {/* Heading  */}
       <div className="club_member_heading max-w-max">
         <h1 className="text-3xl p-1 text-sky-600 max-sm-m:text-[30px]">
@@ -151,8 +122,9 @@ const CoreTeam = () => {
       </div>
       {/* card  */}
       <div className="cards overflow-scroll snap-x snap-mandatory py-6 space-x-4 flex" >
+
         {/* 1st person  */}
-        <div className="snap-center p-4 min-w-[300px]  max-sm:w-full mx-auto bg-sky-600/10 rounded-3xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+        <div className="snap-center p-4 min-w-[300px] max-sm:w-full bg-sky-600/10 rounded-3xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
           <img
             className="block aspect-square mx-auto h-16 rounded-full sm:mx-0 sm:shrink-0"
             src="https://avatars.githubusercontent.com/u/128849038?v=4"
@@ -178,8 +150,9 @@ const CoreTeam = () => {
             </div>
           </div>
         </div>
+
         {/* 2nd person  */}
-        <div className="snap-center p-4 min-w-[300px] max-sm:w-full mx-auto bg-sky-600/10 rounded-3xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+        <div className="snap-center p-4 min-w-[300px] max-sm:w-full bg-sky-600/10 rounded-3xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
           <img
             className="block aspect-square mx-auto h-16 rounded-full sm:mx-0 sm:shrink-0"
             src="https://avatars.githubusercontent.com/u/81636077?v=4"
@@ -205,8 +178,9 @@ const CoreTeam = () => {
             </div>
           </div>
         </div>
+
         {/* 3rd person  */}
-        <div className="snap-center p-4 min-w-[300px] max-sm:w-full mx-auto bg-sky-600/10 rounded-3xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+        <div className="snap-center p-4 min-w-[300px] max-sm:w-full bg-sky-600/10 rounded-3xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
           <img
             className="block aspect-square mx-auto h-16 rounded-full sm:mx-0 sm:shrink-0"
             src="/images/Team/shaan.jpeg"
@@ -228,8 +202,9 @@ const CoreTeam = () => {
             </div>
           </div>
         </div>
+
         {/* 4th person  */}
-        <div className="snap-center p-4 min-w-[300px] max-sm:w-full mx-auto bg-sky-600/10 rounded-3xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+        <div className="snap-center p-4 min-w-[300px] max-sm:w-full bg-sky-600/10 rounded-3xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
           <img
             className="block aspect-square mx-auto h-16 rounded-full sm:mx-0 sm:shrink-0"
             src="https://cdn.pixabay.com/photo/2018/11/13/21/43/avatar-3814049_640.png"
@@ -251,35 +226,10 @@ const CoreTeam = () => {
             </div>
           </div>
         </div>
+
       </div>
       <center className="text-3xl"><CgScrollH /></center>
     </section>
-  );
-};
-// Club Members Details
-const ClubMember = () => {
-  return (
-    <div className="club_member px-[5%] py-12 text-white">
-      {/* Heading  */}
-      <div className="club_member_heading max-w-max">
-        <h1 className=" font-[700] text-[40px] p-1 text-sky-600 max-sm-m:text-[30px]">
-          Club Members
-        </h1>
-        <hr
-          className="h-[2px] w-full border-none rounded-[10px] bg-gradient-to-r from-transparent via-sky-600 to-transparent"
-          style={{
-            borderImage:
-              "linear-gradient(to right, transparent, sky-600, transparent)",
-            borderImageSlice: 1,
-          }}
-        />
-      </div>
-      <MemberCard
-        src="https://tailwindcss.com/img/erin-lindford.jpg"
-        name="Azad"
-        role="UI/UX Designer | Developer"
-      />
-    </div>
   );
 };
 
@@ -287,12 +237,15 @@ const MemberCard = ({ src, name, role }) => {
   return (
     <>
       {/* members details card  */}
-      <div className="py-8 px-8 max-w-sm max-sm:w-full space-y-2 mx-auto bg-sky-600/10 rounded-3xl shadow-lg sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+      <div className="py-8 px-8 w-full space-y-2 mx-auto bg-sky-600/10 rounded-3xl shadow-lg sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+       
         <img
-          className="block aspect-square mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
-          src={src}
-          alt="Woman's Face"
-        />
+          className="aspect-square mx-auto rounded-full overflow-hidden sm:mx-0 sm:shrink-0"
+          src={src} height={80} width={80}
+          alt="club faculty coordinator"
+          />
+        
+
         <div className="text-center space-y-2 sm:text-left">
           <div className="space-y-0.5">
             <p className="text-lg text-sky-600 font-semibold">{name}</p>

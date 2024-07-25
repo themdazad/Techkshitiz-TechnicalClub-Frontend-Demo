@@ -139,7 +139,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
         )}
       </div>
       <div
-        className={`  w-[100vw] h-[600px] max-[750px]:h-[400px]  max-[550px]:h-[350px]`}
+        className={`  w-[100vw] h-[700px] max-[750px]:h-[400px]  max-[550px]:h-[350px]`}
       >
         {/* Hero section  */}
         <div className="w-[100%] h-[100%] px-[5%]  bg-black/60 md:shadow-[inset_0px_0px_1000px_80px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
