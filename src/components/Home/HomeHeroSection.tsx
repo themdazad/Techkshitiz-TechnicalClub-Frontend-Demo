@@ -140,7 +140,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
         className={`  w-[100vw] h-[600px] max-[750px]:h-[400px]  max-[550px]:h-[350px]`}
       >
         {/* Hero section  */}
-        <div className="w-[100%] h-[100%] px-[5%]   md:shadow-[inset_0px_0px_255px_150px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
+        <div className="w-[100%] h-[100%] px-[5%] md:shadow-[inset_0px_0px_255px_150px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
           {/* Hero contents  */}
           <div className="h-full grid place-content-center space-y-4 justify-items-center  text-center w-full">
             <h1 className=" italic text-[#fff] text-4xl  md:text-6xl font-[900] ">
@@ -284,9 +284,55 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
           </div>
         )} */}
       </section>
+
+      {/* Sponsorship  */}
+      <SponsorshipPartener />
+
       {/* faculty details moved in about page  */}
     </>
   );
 }
 
 export default HomeHeroSection;
+
+let sponsorData = {
+  name: "New Fassion House",
+  link: "https://",
+  image:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKNoDM4PpLzK2gn9aEsiYrOak8mbrAgpx-eg&s",
+};
+
+function SponsorshipPartener() {
+  const [sponsor, setSponsor] = useState(sponsorData);
+  return (
+    <>
+      <section className="bg-[#0d1526]">
+        <h1 className="text-sky-600    text-[40px]  text-center font-[700]   max-[1024px]:text-[35px] max-[800px]:text-[30px] max-[480px]:text-[25px]">
+          Sponsorship Partener
+        </h1>
+
+        <div className="w-[100%] flex justify-center items-center">
+          <hr
+            className="h-[2px] w-[200px] md:w-[250px] border-none rounded-[10px] bg-gradient-to-r from-transparent via-sky-600 to-transparent"
+            style={{
+              borderImage:
+                "linear-gradient(to right, transparent, sky-600, transparent)",
+              borderImageSlice: 1,
+            }}
+          />
+        </div>
+        <div className="sponsorship_parteners bg-white py-2 mt-8 flex justify-center items-center">
+         
+              <a href={sponsor.link}>
+                <img
+                  className="image1 object-cover rounded-full h-24 bg-red-500 aspect-square"
+                  src={sponsor.image}
+                  alt="sponsorship member"
+                />
+              </a>
+           
+        </div>
+      </section>
+    </>
+  );
+}
