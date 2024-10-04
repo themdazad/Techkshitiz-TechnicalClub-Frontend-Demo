@@ -125,7 +125,7 @@ const CoreTeam = () => {
         />
       </div>
       {/* card  */}
-      <div className="cards overflow-scroll snap-x snap-mandatory py-6 space-x-4 flex" >
+      <div className="cards overflow-scroll snap-x snap-mandatory my-4 space-x-4 flex justify-around" >
         {/* 1st person  */}
         <div className="snap-center p-4 min-w-[300px]  max-sm:w-full mx-auto bg-sky-600/10 rounded-3xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
           <img
@@ -164,7 +164,7 @@ const CoreTeam = () => {
             <div className="space-y-0.5">
               <p className="text-lg text-sky-600 font-semibold">Md Azad</p>
               <p className="text-slate-400 font-medium">
-                UI/UX | Frontend Developer
+                UX/UI Designer <br /> Frontend Developer
               </p>
             </div>
             <div className="social_links flex max-sm:justify-center space-x-2">
@@ -192,7 +192,7 @@ const CoreTeam = () => {
               <p className="text-lg text-sky-600 font-semibold">Shahnoor Ishtiyaque
               </p>
               <p className="text-slate-400 font-medium">
-                Photographer
+                Content Creator
               </p>
             </div>
             <div className="social_links flex max-sm:justify-center space-x-2">
@@ -252,7 +252,7 @@ const ClubMember = () => {
       <MemberCard
         src="https://tailwindcss.com/img/erin-lindford.jpg"
         name="Azad"
-        role="UI/UX Designer | Developer"
+        role="UX/UI Designer | Developer"
       />
     </div>
   );

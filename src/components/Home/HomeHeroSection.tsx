@@ -145,7 +145,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
           <div className="h-full grid place-content-center space-y-4 justify-items-center  text-center w-full">
             <h1 className=" italic text-[#fff] text-4xl  md:text-6xl font-[900] ">
               Unleash Your Potential <br /> with Tech
-              <span className="text-sky-600">kshitiz</span>
+              <span className="text-sky-600">kshitiz '24</span>
             </h1>
             <div className="text-white text-lg">
               Explore - Innovate - Create
@@ -295,20 +295,13 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
 
 export default HomeHeroSection;
 
-let sponsorData = [
-  {
+let sponsorData = {
   name: "New Fassion House",
   link: "https://",
   image:
     "/images/sponsors/NewFashionHouse.png",
-},
-  {
-  name: "Startup Cell Siwan",
-  link: "https://",
-  image:
-    "/images/sponsors/scellsiwan.jpg",
-},
-];
+};
+
 
 function SponsorshipPartener() {
   const [sponsor, setSponsor] = useState(sponsorData);
@@ -330,14 +323,15 @@ function SponsorshipPartener() {
           />
         </div>
         <div className="sponsorship_parteners bg-white py-2 mt-8 flex justify-center items-center">
-              <a href={sponsor.link}>
-                <img
-                  className="image1 object-contain h-24 aspect-square"
-                  src={sponsor.image}
-                  alt="sponsorship member"
-                />
-              </a>
-           
+        
+                <a href={sponsorData.link} >
+                  <img
+                    className="image1 object-contain h-24 aspect-square"
+                    src={sponsorData.image}
+                    alt="sponsorship member"
+                  />
+                </a>
+                    
         </div>
       </section>
     </>
