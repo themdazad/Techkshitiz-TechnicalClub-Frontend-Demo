@@ -125,7 +125,7 @@ const CoreTeam = () => {
         />
       </div>
       {/* card  */}
-      <div className="cards overflow-scroll snap-x snap-mandatory my-4 space-x-4 flex justify-around" >
+      <div className="cards overflow-scroll snap-x snap-mandatory my-4 gap-3 flex" >
         {/* 1st person  */}
         <div className="snap-center p-4 min-w-[300px]  max-sm:w-full mx-auto bg-sky-600/10 rounded-3xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
           <img
