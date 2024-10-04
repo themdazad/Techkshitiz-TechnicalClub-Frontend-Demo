@@ -295,12 +295,20 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
 
 export default HomeHeroSection;
 
-let sponsorData = {
+let sponsorData = [
+  {
   name: "New Fassion House",
   link: "https://",
   image:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKNoDM4PpLzK2gn9aEsiYrOak8mbrAgpx-eg&s",
-};
+    "/images/sponsors/NewFashionHouse.png",
+},
+  {
+  name: "Startup Cell Siwan",
+  link: "https://",
+  image:
+    "/images/sponsors/scellsiwan.jpg",
+},
+];
 
 function SponsorshipPartener() {
   const [sponsor, setSponsor] = useState(sponsorData);
@@ -322,10 +330,9 @@ function SponsorshipPartener() {
           />
         </div>
         <div className="sponsorship_parteners bg-white py-2 mt-8 flex justify-center items-center">
-         
               <a href={sponsor.link}>
                 <img
-                  className="image1 object-cover rounded-full h-24 bg-red-500 aspect-square"
+                  className="image1 object-contain h-24 aspect-square"
                   src={sponsor.image}
                   alt="sponsorship member"
                 />

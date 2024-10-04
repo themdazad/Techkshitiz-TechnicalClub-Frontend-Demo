@@ -7,6 +7,7 @@ import { CgScrollH } from "react-icons/cg";
 
 // faculty images
 const PrincipalImages = "/images/faculty/PrincipalSir.jpg";
+const PreetamAmrit = "/images/faculty/preetamamrit.jpg";
 const SundramMishra = "/images/faculty/SundramMishra.jpeg";
 const YamikaPatel = "/images/faculty/yamikapatel.jpg";
 const MohitPrakash = "/images/faculty/mohitprakash.jpg";
@@ -23,7 +24,7 @@ export const TechkshitizMember = () => {
             alt="PrincipalImages"
           />
           <h1 className="text-[#FFFFFF] text-[22px] leading-[30px] font-[700] mt-5 max-md:mt-0">
-            Prof.(Dr.) Suryakant Singh
+            Dr. Suryakant Singh
           </h1>
         </div>
         <div className=" w-[736px] p-4 max-mll:w-[650px] max-xl:w-full">
@@ -38,7 +39,7 @@ export const TechkshitizMember = () => {
               borderImageSlice: 1,
             }}
           />
-          <p className="text-[#ffffffa1] text-[20px] text-justify break-all max-sm-m:text-[16px]">
+          <p className="text-[#ffffffa1] mt-4 text-[20px] text-justify break-all max-sm-m:text-[16px]">
             Our mission is to foster a vibrant community of tech enthusiasts
             passionate about innovation and collaboration. Whether you're a
             beginner eager to learn or an expert ready to share your knowledge,
@@ -78,13 +79,18 @@ const ClubIncharge = () => {
           }}
         />
       </div>
-      <div className="w-full space-y-4 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-6">
+      <div className="w-full py-4 mt-4 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 items-center">
         <MemberCard
+          src={PreetamAmrit}
+          name="Dr. Preetam Amrit"
+          role="Computer Science & Engineering"
+        />
+         <MemberCard
           src={SundramMishra}
           name="Prof. Sundram Mishra"
           role="Electrical Engineering"
         />
-        <MemberCard
+         <MemberCard
           src={YamikaPatel}
           name="Prof. Yamika Patel"
           role="Mechanical Engineering"
@@ -93,40 +99,9 @@ const ClubIncharge = () => {
           src={MohitPrakash}
           name="Prof. Mohit Prakash"
           role="Electrical Engineering"
-        />
+        />      
       </div>
-      {/* <div className="mb-12 h-[auto] bg-[#0d1526] flex gap-6  max-w-[1440px] max-sm:w-full m-auto  p-10 pt-0 pb-0  max-xl:flex-col  max-md:p-0 max-xl:gap-8 max-lg:gap-4">
-        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 ">
-          <img
-            className="w-[330px] h-[350px] rounded-[20px] max-lg:w-[250px] max-lg:h-[280px] max-sm:w-[280px] max-sm:h-[300px]"
-            src={SundramMishra}
-            alt="Faculty"
-          />
-          <h1 className="text-[#FFFFFF] text-[22px] leading-[30px] font-[700] mt-5 max-md:mt-0">
-            Prof. Sundram Mishra
-          </h1>
-        </div>
-        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 ">
-          <img
-            className="w-[330px] h-[350px] rounded-[20px] max-lg:w-[250px] max-lg:h-[280px] max-sm:w-[280px] max-sm:h-[300px]"
-            src={YamikaPatel}
-            alt="YamikaPatel"
-          />
-          <h1 className="text-[#FFFFFF] text-[22px] leading-[30px] font-[700] mt-5 max-md:mt-0">
-            Prof. Yamika Patel
-          </h1>
-        </div>
-        <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 ">
-          <img
-            className="w-[330px] h-[350px] rounded-[20px] max-lg:w-[250px] max-lg:h-[280px] max-sm:w-[280px] max-sm:h-[300px]"
-            src={MohitPrakash}
-            alt="Faculty"
-          />
-          <h1 className="text-[#FFFFFF] text-[22px] leading-[30px] font-[700] mt-5 max-md:mt-0">
-            Prof. Mohit Prakash
-          </h1>
-        </div>
-      </div> */}
+      
     </section>
   );
 };
@@ -287,11 +262,11 @@ const MemberCard = ({ src, name, role }) => {
   return (
     <>
       {/* members details card  */}
-      <div className="py-8 px-8 max-w-sm max-sm:w-full space-y-2 mx-auto bg-sky-600/10 rounded-3xl shadow-lg sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+      <div className="p-8 m-4  max-w-sm max-sm:w-full space-y-2 mx-auto bg-sky-600/10 rounded-3xl shadow-lg sm:flex sm:items-center sm:space-y-2 sm:space-x-6">
         <img
-          className="block aspect-square mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
+          className="block aspect-square h-20 object-cover mx-auto  rounded-full sm:mx-0 sm:shrink-0"
           src={src}
-          alt="Woman's Face"
+          alt="faculty's profile"
         />
         <div className="text-center space-y-2 sm:text-left">
           <div className="space-y-0.5">
