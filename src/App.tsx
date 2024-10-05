@@ -48,7 +48,7 @@ import EventListPage from './components/partials/Partials/event/EventListPage.ts
 import EventListDescription from './components/partials/Partials/event/EventListDescription.tsx';
 import RegistrationsApplicationsDetails from './components/Panel/StudentPanel/RegistrationsApplicationsDetails.tsx';
 import Referrals from './components/Panel/StudentPanel/Referrals.tsx';
-import MyRounds from './components/Panel/StudentPanel/MyRounds.tsx';
+import AddMembers from './components/Panel/StudentPanel/AddMembers.tsx';
 import TechkshitizAwards from './components/Panel/StudentPanel/TechkshitizAwards.tsx';
 import Watchlist from './components/Panel/StudentPanel/Watchlist.tsx';
 import RecentlyViewed from './components/Panel/StudentPanel/RecentlyViewed.tsx';
@@ -86,6 +86,7 @@ import AdminPanelClubManagerContestAdd from './components/Panel/ClubManagerPanel
 import ContestDescription from './components/partials/Partials/Contest/ContestDescription.tsx';
 import TechKshitizUserPublicProfile from './components/public/StudentProfile/TechKshitizUserPublicProfile.tsx';
 import ClubManagerLeaderBoard from './components/Panel/ClubManagerPanel/Quiz/ClubManagerLeaderBoard.tsx';
+
 function App() {
   const [getYear, SetYear] = useState([2024, 2023, 2022, 2021])
   const [GetClubUrl, SetClubUrl] = useState<string[]>([]);
@@ -234,12 +235,12 @@ function App() {
         <Route path='/government-engineering-college-siwan/professor/signup/request' element={<ProfessorLogin />} />
         <Route path='/participant/dashboard/profile/' element={<ParticipantProfile />} ></Route>
 
-        {/*College Student Profile*/}
+        {/*College Student Dashboard Profile*/}
         <Route path='/student/profile/' element={<StudentPaneHome />} >
           <Route path='' element={<RegistrationsApplicationsDetails />} />
+          <Route path='/student/profile/add-members' element={<AddMembers/>} />
           <Route path='/student/profile/registrations/applications' element={<RegistrationsApplicationsDetails />} />
           <Route path='/student/profile/referrals' element={<Referrals />} />
-          <Route path='/student/profile/my-rounds' element={<MyRounds />} />
           <Route path='/student/profile/techKshitiz/awards' element={<TechkshitizAwards />} />
           <Route path='/student/profile/watchlist' element={<Watchlist />} />
           <Route path='/student/profile/recently/viewed' element={<RecentlyViewed />} />
@@ -253,12 +254,12 @@ function App() {
         <Route path='/professor/profile/' element={<ProfessorProfileHeroSection />} >
         </Route>
 
-        {/*Intra College Student Profile*/}
+        {/*Intra College Student Dashboard Profile*/}
         <Route path='/intra/college/student/profile/' element={<StudentPaneHome />} >
           <Route path='' element={<RegistrationsApplicationsDetails />} />
           <Route path='/intra/college/student/profile/registrations/applications' element={<RegistrationsApplicationsDetails />} />
           <Route path='/intra/college/student/profile/referrals' element={<Referrals />} />
-          <Route path='/intra/college/student/profile/my-rounds' element={<MyRounds />} />
+          <Route path='/intra/college/student/profile/my-rounds' element={<AddMembers />} />
           <Route path='/intra/college/student/profile/techKshitiz/awards' element={<TechkshitizAwards />} />
           <Route path='/intra/college/student/profile/watchlist' element={<Watchlist />} />
           <Route path='/intra/college/student/profile/recently/viewed' element={<RecentlyViewed />} />

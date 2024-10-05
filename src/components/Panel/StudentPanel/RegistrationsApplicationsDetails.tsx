@@ -82,6 +82,8 @@ function RegistrationsApplicationsDetails() {
     useEffect(() => {
         verifydata();
     }, [])
+
+    // Driver code 
     return (
         <>
             {IsLoading ? (

@@ -16,7 +16,7 @@ function MainFooter() {
         Techkshitiz {new Date().getFullYear()}, ©Copyright reserved.
         <br />
         Maintained with <span className="text-red-600">❤</span> By{" "}
-        <NavLink className="font-semibold text-[#ece528cf]" to="/">
+        <NavLink className="font-semibold text-sky-600" to="/">
           Technical Club, GEC Siwan
         </NavLink>
       </p>
