@@ -322,7 +322,7 @@ function SponsorshipPartener() {
             }}
           />
         </div>
-        <div className="sponsorship_parteners bg-white py-2 mt-8 flex justify-center items-center">
+        <div className="sponsorship_parteners bg-zinc-300 py-2 mt-8 flex justify-center items-center">
         
                 <a href={sponsorData.link} >
                   <img
