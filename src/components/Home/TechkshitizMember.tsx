@@ -65,8 +65,8 @@ export const TechkshitizMember = () => {
 // Club Incharge Details
 const ClubIncharge = () => {
   return (
-    <section className=" px-[5%] club_incharge">
-      <div className="club_incharge_heading max-w-max">
+    <section className="px-[5%] club_incharge">
+       <div className="club_incharge_heading max-w-max">
         <h1 className="font-[700] text-[40px] p-1 text-sky-600 max-sm-m:text-[30px]">
           Club Incharge
         </h1>
@@ -79,18 +79,18 @@ const ClubIncharge = () => {
           }}
         />
       </div>
-      <div className="w-full py-4 mt-4 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 items-center">
+      <div className="w-full gap-3 mt-4 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 items-stretch">
         <MemberCard
           src={PreetamAmrit}
           name="Dr. Preetam Amrit"
           role="Computer Science & Engineering"
         />
-         <MemberCard
+        <MemberCard
           src={SundramMishra}
           name="Prof. Sundram Mishra"
           role="Electrical Engineering"
         />
-         <MemberCard
+        <MemberCard
           src={YamikaPatel}
           name="Prof. Yamika Patel"
           role="Mechanical Engineering"
@@ -99,9 +99,8 @@ const ClubIncharge = () => {
           src={MohitPrakash}
           name="Prof. Mohit Prakash"
           role="Electrical Engineering"
-        />      
+        />
       </div>
-      
     </section>
   );
 };
@@ -231,50 +230,21 @@ const CoreTeam = () => {
     </section>
   );
 };
-// Club Members Details
-const ClubMember = () => {
-  return (
-    <div className="club_member px-[5%] py-12 text-white">
-      {/* Heading  */}
-      <div className="club_member_heading max-w-max">
-        <h1 className=" font-[700] text-[40px] p-1 text-sky-600 max-sm-m:text-[30px]">
-          Club Members
-        </h1>
-        <hr
-          className="h-[2px] w-full border-none rounded-[10px] bg-gradient-to-r from-transparent via-sky-600 to-transparent"
-          style={{
-            borderImage:
-              "linear-gradient(to right, transparent, sky-600, transparent)",
-            borderImageSlice: 1,
-          }}
-        />
-      </div>
-      <MemberCard
-        src="https://tailwindcss.com/img/erin-lindford.jpg"
-        name="Azad"
-        role="UX/UI Designer | Developer"
-      />
-    </div>
-  );
-};
 
 const MemberCard = ({ src, name, role }) => {
   return (
-    <>
-      {/* members details card  */}
-      <div className="p-8 m-4  max-w-sm max-sm:w-full space-y-2 mx-auto bg-sky-600/10 rounded-3xl shadow-lg sm:flex sm:items-center sm:space-y-2 sm:space-x-6">
-        <img
-          className="block aspect-square h-20 object-cover mx-auto  rounded-full sm:mx-0 sm:shrink-0"
-          src={src}
-          alt="faculty's profile"
-        />
-        <div className="text-center space-y-2 sm:text-left">
-          <div className="space-y-0.5">
-            <p className="text-lg text-sky-600 font-semibold">{name}</p>
-            <p className="text-slate-400 font-medium">{role}</p>
-          </div>
+    <div className="p-4 sm:p-8 m-4 max-w-sm w-full mx-auto bg-sky-600/10 rounded-3xl shadow-lg flex flex-col items-center justify-between h-full">
+      <img
+        className="block aspect-square h-20 w-20 object-cover mx-auto rounded-full"
+        src={src}
+        alt="faculty's profile"
+      />
+      <div className="text-center">
+        <div className="space-y-0.5">
+          <p className="text-lg text-sky-600 font-semibold">{name}</p>
+          <p className="text-slate-400 font-medium">{role}</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
