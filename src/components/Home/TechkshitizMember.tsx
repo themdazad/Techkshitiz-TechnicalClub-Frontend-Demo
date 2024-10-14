@@ -65,7 +65,7 @@ export const TechkshitizMember = () => {
 // Club Incharge Details
 const ClubIncharge = () => {
   return (
-    <section className=" px-[5%] club_incharge">
+    <section className=" px-[5%] club_incharge ">
       <div className="club_incharge_heading max-w-max">
         <h1 className="font-[700] text-[40px] p-1 text-sky-600 max-sm-m:text-[30px]">
           Club Incharge
@@ -79,7 +79,7 @@ const ClubIncharge = () => {
           }}
         />
       </div>
-      <div className="w-full py-4 mt-4 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 items-center">
+      <div className="w-full gap-3 mt-4 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 items-center">
         <MemberCard
           src={PreetamAmrit}
           name="Dr. Preetam Amrit"
@@ -260,11 +260,11 @@ const ClubMember = () => {
 
 const MemberCard = ({ src, name, role }) => {
   return (
-    <>
+    <>    
       {/* members details card  */}
-      <div className="p-8 m-4  max-w-sm max-sm:w-full space-y-2 mx-auto bg-sky-600/10 rounded-3xl shadow-lg sm:flex sm:items-center sm:space-y-2 sm:space-x-6">
+           <div className="p-4 sm:p-8 m-4 max-w-sm w-full space-y-4 mx-auto bg-sky-600/10 rounded-3xl shadow-lg flex flex-col sm:flex-row sm:items-center sm:space-y-0 sm:space-x-6">
         <img
-          className="block aspect-square h-20 object-cover mx-auto  rounded-full sm:mx-0 sm:shrink-0"
+          className="block aspect-square h-20 w-20 object-cover mx-auto rounded-full sm:mx-0 sm:shrink-0"
           src={src}
           alt="faculty's profile"
         />
