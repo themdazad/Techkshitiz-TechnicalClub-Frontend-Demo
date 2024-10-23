@@ -5,14 +5,14 @@ import { NavLink } from 'react-router-dom';
 import avatar_url from "../images/vikashdeveloper.jpg";
 import messageFly from "../images/messageFly.svg";
 import destinationFly from "../images/DestinationFly.svg";
-import {TechkshitizMember} from '../Home/TechkshitizMember.tsx';
+import { TechkshitizMember } from '../Home/TechkshitizMember.tsx';
 
 function ContactsPage() {
     return (
         <>
             <MainHeader />
             <TechkshitizMember />
-            
+
             <div className='w-[100%] h-[100%] overflow-auto overflow-x-hidden bg-[#0f1526]'>
                 <div className='w-[100%] h-[auto] pb-[20px] p-[10px]'>
                     <h1 className=' text-center pt-[10px] pb-[10px] max-[800px]:pb-[2px] mt-4 font-[600] text-sky-600 text-[36px] max-[1024px]:text-[30px] max-[800px]:text-[25px] max-[480px]:text-[15px]'>Contact Us</h1>

@@ -93,9 +93,9 @@ function AddMembers() {
 
       {/*Just Testing to show data coming in JSON format  */}
 
-      <h1>Members JSON Data :</h1>
+      {/* <h1>Members JSON Data :</h1>
       
-      <pre>{JSON.stringify(membersData, null, 2)}</pre>
+      <pre>{JSON.stringify(membersData, null, 2)}</pre> */}
 
     </section>
   );

@@ -86,6 +86,7 @@ import AdminPanelClubManagerContestAdd from './components/Panel/ClubManagerPanel
 import ContestDescription from './components/partials/Partials/Contest/ContestDescription.tsx';
 import TechKshitizUserPublicProfile from './components/public/StudentProfile/TechKshitizUserPublicProfile.tsx';
 import ClubManagerLeaderBoard from './components/Panel/ClubManagerPanel/Quiz/ClubManagerLeaderBoard.tsx';
+import ProfileUpdate from './components/Panel/StudentPanel/ProfileUpdate.tsx';
 
 function App() {
   const [getYear, SetYear] = useState([2024, 2023, 2022, 2021])
@@ -237,7 +238,9 @@ function App() {
 
         {/*College Student Dashboard Profile*/}
         <Route path='/student/profile/' element={<StudentPaneHome />} >
-          <Route path='' element={<RegistrationsApplicationsDetails />} />
+          {/* <Route path='' element={<RegistrationsApplicationsDetails />} /> */}
+          <Route path='' element={<ProfileUpdate />} />
+          <Route path='/student/profile/update' element={<ProfileUpdate />} />
           <Route path='/student/profile/add-members' element={<AddMembers/>} />
           <Route path='/student/profile/registrations/applications' element={<RegistrationsApplicationsDetails />} />
           <Route path='/student/profile/referrals' element={<Referrals />} />

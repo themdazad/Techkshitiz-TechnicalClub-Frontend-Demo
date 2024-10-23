@@ -43,16 +43,24 @@ const CollegeStudentSignupRequest = () => {
     if (event.target.value) {
       const file = event.target.files[0];
       const SudentId = document.querySelector("#student_id");
-      if (file.type === "image/jpeg" || file.type === "image/png") {
-        if (file.size >= 102400) {
+      //all image type check
+
+      if (
+        file.type === "image/jpeg" ||
+        file.type === "image/png" ||
+        file.type === "image/jpg" ||
+        file.type === "image/webp" ||
+        file.type === "image/gif"
+      ) {
+        if (file.size >= 1002400) {
           Object(SudentId).value = "";
-          toast.error("File size below the 100kb");
+          toast.error("File size below the 1MB");
         } else {
           SetStudentIdCard(file);
         }
       } else {
         Object(SudentId).value = "";
-        toast.error("Only Support image/jpeg format");
+        toast.error("Only Support image format");
       }
     } else {
       toast.warning("Please select a file");
@@ -100,15 +108,15 @@ const CollegeStudentSignupRequest = () => {
       phone_Number &&
       college_student_name &&
       email &&
-      Branch_Name &&
+      // Branch_Name &&
       admissionYear &&
       Date_Of_Birth &&
       Registration_Number &&
       currentYear &&
       college_Name &&
-      college_Id &&
-      Branch_Id &&
-      GetStudentIdCard
+      college_Id
+      // Branch_Id
+      // GetStudentIdCard
       //   GetTransactionScreenShot &&
       //   name_as_per_bank_account &&
       //   transaction_id &&
@@ -116,80 +124,101 @@ const CollegeStudentSignupRequest = () => {
       //   paymentDate
     ) {
       try {
-        const SudentId = document.querySelector("#student_id");
-        if (SudentId) {
-          const CollegeStudentData = new FormData();
-          CollegeStudentData.append("full_Name", college_student_name);
-          CollegeStudentData.append("email_Id", email);
-          CollegeStudentData.append("phone_Number", phone_Number);
-          CollegeStudentData.append("admission_Year", admissionYear);
-          CollegeStudentData.append("current_Year", currentYear);
-          CollegeStudentData.append("college_Id_Prof", GetStudentIdCard);
-          CollegeStudentData.append("college_Name", college_Name);
-          CollegeStudentData.append("college_Name_Id", college_Id);
-          CollegeStudentData.append("departement_Name", Branch_Name);
-          CollegeStudentData.append("branch_Id", Branch_Id);
-          CollegeStudentData.append("Registration_Number", Registration_Number);
-          CollegeStudentData.append("Date_Of_Birth", Date_Of_Birth);
-          //   CollegeStudentData.append(
-          //     "name_as_per_bank_account",
-          //     name_as_per_bank_account
-          //   );
-          //   CollegeStudentData.append("transaction_id", transaction_id);
-          //   CollegeStudentData.append(
-          //     "bank_last_four_digit_and_upi_Number",
-          //     bank_last_four_digit_and_upi_Number
-          //   );
-          //   CollegeStudentData.append("paymentDate", paymentDate);
-          //   CollegeStudentData.append("paymentAmount", "99");
-          //   CollegeStudentData.append(
-          //     "transaction_Screen_Short",
-          //     GetTransactionScreenShot
-          //   );
-          const res = await fetch(
-            baseUrl + "/api/college/student/request/college-student-id",
-            {
-              method: "POST",
-              body: CollegeStudentData,
-              credentials: "include",
-            }
-          );
-          const CollegeStudentRequestResponse = await res.json();
-          if (res.status === 200) {
-            navigate("/");
-            Object(SudentId).value = "";
-            toast.success(CollegeStudentRequestResponse.message);
-            setIsLoadingRequest(false);
-          } else if (res.status === 400) {
-            Object(SudentId).value = "";
-            toast.error(CollegeStudentRequestResponse.message);
-            setIsLoadingRequest(false);
-          } else if (res.status === 401) {
-            Object(SudentId).value = "";
-            toast.error(CollegeStudentRequestResponse.message);
-            setIsLoadingRequest(false);
-          } else if (res.status === 402) {
-            toast.error(CollegeStudentRequestResponse.message);
-            setIsLoadingRequest(false);
-          } else if (res.status === 403) {
-            Object(SudentId).value = "";
-            toast.error(CollegeStudentRequestResponse.message);
-            setIsLoadingRequest(false);
-          } else if (res.status === 405) {
-            Object(SudentId).value = "";
-            toast.error(CollegeStudentRequestResponse.message);
-            setIsLoadingRequest(false);
-          } else if (res.status === 406) {
-            Object(SudentId).value = "";
-            toast.error(CollegeStudentRequestResponse.message);
-            setIsLoadingRequest(false);
-          } else {
-            Object(SudentId).value = "";
-            toast.error("Some technical issue");
-            setIsLoadingRequest(false);
+        // const SudentId = document.querySelector("#student_id");
+        // if (SudentId) {
+        // const CollegeStudentData = new FormData();
+        // CollegeStudentData.append("full_Name", college_student_name);
+        // CollegeStudentData.append("email_Id", email);
+        // CollegeStudentData.append("phone_Number", phone_Number);
+        // CollegeStudentData.append("admission_Year", admissionYear);
+        // CollegeStudentData.append("current_Year", currentYear);
+        // // CollegeStudentData.append("college_Id_Prof", GetStudentIdCard);
+        // CollegeStudentData.append("college_Name", college_Name);
+        // CollegeStudentData.append("college_Name_Id", college_Id);
+        // CollegeStudentData.append("departement_Name", Branch_Name);
+        // CollegeStudentData.append("branch_Id", Branch_Id);
+        // CollegeStudentData.append("Registration_Number", Registration_Number);
+        // CollegeStudentData.append("Date_Of_Birth", Date_Of_Birth);
+        //   CollegeStudentData.append(
+        //     "name_as_per_bank_account",
+        //     name_as_per_bank_account
+        //   );
+        //   CollegeStudentData.append("transaction_id", transaction_id);
+        //   CollegeStudentData.append(
+        //     "bank_last_four_digit_and_upi_Number",
+        //     bank_last_four_digit_and_upi_Number
+        //   );
+        //   CollegeStudentData.append("paymentDate", paymentDate);
+        //   CollegeStudentData.append("paymentAmount", "99");
+        //   CollegeStudentData.append(
+        //     "transaction_Screen_Short",
+        //     GetTransactionScreenShot
+        //   );
+        const res = await fetch(
+          baseUrl + "/api/college/student/request/college-student-id",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              full_Name: college_student_name,
+              email_Id: email,
+              phone_Number: phone_Number,
+              admission_Year: admissionYear,
+              current_Year: currentYear,
+              // college_Id_Prof: GetStudentIdCard,
+              college_Name: college_Name,
+              college_Name_Id: college_Id,
+              departement_Name: Branch_Name,
+              branch_Id: Branch_Id,
+              Registration_Number: Registration_Number,
+              Date_Of_Birth: Date_Of_Birth,
+              // name_as_per_bank_account: name_as_per_bank_account,
+              // transaction_id: transaction_id,
+              // bank_last_four_digit_and_upi_Number: bank_last_four_digit_and_upi_Number,
+              // paymentDate: paymentDate,
+              // paymentAmount: "99",
+              // transaction_Screen_Short: GetTransactionScreenShot,
+            }),
           }
+        );
+        const CollegeStudentRequestResponse = await res.json();
+        if (res.status === 200) {
+          navigate("/");
+          // Object(SudentId).value = "";
+          toast.success(CollegeStudentRequestResponse.message);
+          setIsLoadingRequest(false);
+        } else if (res.status === 400) {
+          // Object(SudentId).value = "";
+          toast.error(CollegeStudentRequestResponse.message);
+          setIsLoadingRequest(false);
+        } else if (res.status === 401) {
+          // Object(SudentId).value = "";
+          toast.error(CollegeStudentRequestResponse.message);
+          setIsLoadingRequest(false);
+        } else if (res.status === 402) {
+          toast.error(CollegeStudentRequestResponse.message);
+          setIsLoadingRequest(false);
+        } else if (res.status === 403) {
+          // Object(SudentId).value = "";
+          toast.error(CollegeStudentRequestResponse.message);
+          setIsLoadingRequest(false);
+        } else if (res.status === 405) {
+          // Object(SudentId).value = "";
+          toast.error(CollegeStudentRequestResponse.message);
+          setIsLoadingRequest(false);
+        } else if (res.status === 406) {
+          // Object(SudentId).value = "";
+          toast.error(CollegeStudentRequestResponse.message);
+          setIsLoadingRequest(false);
         } else {
+          // Object(SudentId).value = "";
+          toast.error("Some technical issue");
+          setIsLoadingRequest(false);
         }
+        // } else {
+        // }
       } catch (error) {
         toast.error("Some technical issue");
         setIsLoadingRequest(false);
@@ -330,7 +359,7 @@ const CollegeStudentSignupRequest = () => {
                 name="branch"
                 value={Object(Id)?.Branch_Id}
                 onChange={changeBranchNamedata}
-                required
+                // required
                 className="p-[10px] border-[2px] border-[#162935] rounded-[5px] bg-[#0e1c24] outline-none focus:border-[#29465a]   max-md:mt-2 max-md:h-[50px] w-[100%] h-[100%]"
               >
                 <option value="">Select your branch</option>
@@ -428,7 +457,7 @@ const CollegeStudentSignupRequest = () => {
                   className="p-[10px]   max-md:mt-2 max-md:h-[50px] border-[2px] border-[#162935] rounded-[5px] bg-transparent outline-none focus:border-[#29465a] w-[100%] h-[100%]"
                 />
               </div>
-              <div className="w-[100%] h-[50px] max-md:h-[150px] max-md:mt-2 space-y-2">
+              {/* <div className="w-[100%] h-[50px] max-md:h-[150px] max-md:mt-2 space-y-2">
                 <label htmlFor="student_id" className="font-[600]  ">
                   Upload College Id Card :{" "}
                 </label>
@@ -441,10 +470,10 @@ const CollegeStudentSignupRequest = () => {
                   className="p-[10px]  max-md:h-[50px] border-[2px] border-[#162935] rounded-[5px] bg-transparent outline-none focus:border-[#29465a] w-[100%] h-[100%]"
                 />
                 <span className="flex  gap-2 text-[#ffeb39]">
-                  <b>Note: </b>Only jpeg & png image accepted <br /> Size should
-                  be less then 100kb
+                  <b>Note: </b>Only image accepted <br /> Size should be less
+                  then 1MB
                 </span>
-              </div>
+              </div> */}
 
               {/* </div> */}
               {/* <div className="max-md:mt-8 border-[1px]  max-md:h-[400px] max-md:mb-6 border-[#c2c2c2] rounded-[5px] outline-[#bb2470] w-[100%] h-[260px] flex justify-center max-sm:h-[250px] items-center">

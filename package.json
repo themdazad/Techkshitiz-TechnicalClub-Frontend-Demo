@@ -15,6 +15,8 @@
     "babel-plugin-relay": "^16.2.0",
     "codemirror": "^5.65.16",
     "dotenv": "^16.3.1",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.2",
     "monaco-editor": "^0.48.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
