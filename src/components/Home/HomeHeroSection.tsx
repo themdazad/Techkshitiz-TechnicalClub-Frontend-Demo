@@ -243,9 +243,9 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
       {/* past event winners section */}
       <section className="bg-[#0d1526] w-[100%] h-[420px] py-12">
         {/* heading  */}
-        <div className="">
-          <h1 className="text-sky-600    text-[40px]  text-center font-[700]   max-[1024px]:text-[35px] max-[800px]:text-[30px] max-[480px]:text-[25px]">
-            WINNERS
+        <div>
+          <h1 className="text-sky-600  text-[40px] text-center font-[700] max-[1024px]:text-[35px] max-[800px]:text-[30px] max-[480px]:text-[25px]">
+            TechKshitiz 24 Winners
           </h1>
 
           <div className="w-[100%] flex justify-center items-center">

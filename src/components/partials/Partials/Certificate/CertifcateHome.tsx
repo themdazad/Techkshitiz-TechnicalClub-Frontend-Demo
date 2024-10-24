@@ -87,12 +87,13 @@ function CertifcateHome() {
 
 
         <MainHeader />
-        <div className="w-[100%] h-[100%]   flex justify-center items-center max-sm:p-3 ">
-          <div className="w-[600px] max-sm:w-full h-[300px] border-2 rounded-[15px] border-[#141a32] bg-[#0c101d] p-[40px]">
-            <h1 className=" text-center text-[#fffffff3] text-[16px] font-[700]">
-             Verify and Download TechKshitiz Certificate
+        <div className="w-[100%] h-[100%] flex justify-center items-center max-sm:p-3 ">
+          {/* form inner container  */}
+          <div className="w-[600px] max-sm:w-full h-[300px] border-2 rounded-[15px] border-[#141a32] bg-[#0c101d] place-content-center">
+            <h1 className=" bg-sky-500 py-4 text-center  text-[#fffffff3] text-[16px] mb-6 font-[700]">
+             Verify TechKshitiz Certificate
             </h1>
-            <div className="w-[100%] h-[200px]  p-[30px] flex justify-center items-center">
+            <div className="w-[100%] flex justify-center items-center">
               <form onSubmit={dataSubmited} className="w-[250px] h-[auto] ">
                 <label
                   htmlFor="VerifyCertificate"
@@ -112,8 +113,10 @@ function CertifcateHome() {
                   }}
                   id="VerifyCertificate"
                   className=" bg-transparent capitalize border-2 border-[#0a151c] text-[#e9f7ffcf] focus:border-[#142331] outline-none p-[10px] w-full rounded-[4px] mt-[10px] h-[40px] text-[13px] max-lg:text-[13px]"
-                  placeholder="Enter Certificate Id"
+                  placeholder="Enter 12 digits certificate ID"
                 ></input>
+
+                {/* form verification button  */}
                 <div className="w-[100%] h-[auto] p-[15px] pl-0 flex justify-center items-center">
                   <button
                     disabled={
