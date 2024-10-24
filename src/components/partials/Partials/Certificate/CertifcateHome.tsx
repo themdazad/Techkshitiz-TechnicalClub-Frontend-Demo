@@ -84,11 +84,13 @@ function CertifcateHome() {
         <title>TechKshitiz verified certificate download</title>
       </Helmet>
       <div className="w-full h-[100vh] bg-[#0f1526] overflow-auto ">
+
+
         <MainHeader />
         <div className="w-[100%] h-[100%]   flex justify-center items-center max-sm:p-3 ">
           <div className="w-[600px] max-sm:w-full h-[300px] border-2 rounded-[15px] border-[#141a32] bg-[#0c101d] p-[40px]">
             <h1 className=" text-center text-[#fffffff3] text-[16px] font-[700]">
-              Enter TechkShitiz Certificate Id Below To Verify
+             Verify and Download TechKshitiz Certificate
             </h1>
             <div className="w-[100%] h-[200px]  p-[30px] flex justify-center items-center">
               <form onSubmit={dataSubmited} className="w-[250px] h-[auto] ">

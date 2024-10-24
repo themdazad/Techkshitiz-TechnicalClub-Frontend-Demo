@@ -37,22 +37,11 @@ function VerifyCertificate() {
   };
 
   return (
-    <>
+    <section className="bg-[#080c17]  h-[100vh] ">
       <MainHeader />
-      <div className="flex flex-col items-center bg-[#080c17] justify-center">
-        {/* <button
-          onClick={downloadPDF}
-          className="bg-[#000] text-[#fff]  p-[10px] rounded-[5px] cursor-pointer"
-        >
-          Download Certificate
-        </button> */}
-        <p className="text-[#ffffff] mt-[30px] px-4">
-          <b className="text-[#ff0659]"> Note*:</b> This certificate is only for
-          verification purposes. Please contact the TechKshitiz team for any
-          queries.
-        </p>
-      </div>
-      <div className=" w-[100%] h-[85vh] bg-[#080c17] flex justify-center items-center  p-[20px]   ">
+     
+      {/* certificate */}
+      <div className=" w-[100%] flex place-content-center px-[5%] py-12">
         {/* <FirstPriceCertificate /> */}
         <div
           id="certificate"
@@ -142,10 +131,27 @@ function VerifyCertificate() {
               by <b>TECHKSHITIZ</b> at Government Engineering College, Siwan, on
               20th-21st September 2024.
             </p>
+
           </div>
         </div>
       </div>
-    </>
+
+      <div className="flex flex-col items-center bg-[#080c17] justify-center">
+        <p className="text-[#ffffff] px-4">
+          <b className="text-[#ff0659]"> Note:</b> This certificate is only for
+          verification purposes. Please contact the TechKshitiz team for any
+          queries.
+        </p>
+      </div>
+
+      {/* download certificate button  */}
+      {/* <button
+          onClick={downloadPDF}
+          className="bg-[#35A6DC] text-[#fff]  p-[10px] rounded-[5px] cursor-pointer"
+        >
+          Download Certificate
+        </button> */}
+    </section>
   );
 }
 

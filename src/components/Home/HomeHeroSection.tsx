@@ -8,36 +8,36 @@ import { ComingSoon } from "../ComingSoon/ComingSoon.tsx";
 function HomeHeroSection({ winnerParticipantData, IsLoading }) {
   const images = useMemo(
     () => [
+      "/images/carousel/earth_surface.jpg",
       "/images/carousel/event_winners_24.jpg",
-      "/images/carousel/event_24_Members.jpg",
-      "/images/carousel/event_24_GP_Intra_college.jpg",
-      "/images/carousel/event_24_facuilty_Incharge.jpg",
+      "/images/carousel/techkshitiz_member.jpeg",
       "/images/carousel/event_24_certificate_distrubution.jpg",
-      "/images/carousel/event_24_Starting.jpg",
+      "/images/carousel/event_24_Members.jpg",
+      // "/images/carousel/event_24_facuilty_Incharge.jpg",
       "/images/carousel/event_24.jpg",
-      "/images/carousel/event_24_A.jpg",
-      "/images/carousel/event_24_B.jpg",
-      "/images/carousel/event_24_C.jpg",
+      // "/images/carousel/event_24_Starting.jpg",
+      // "/images/carousel/event_24_A.jpg",
+      // "/images/carousel/event_24_B.jpg",
+      // "/images/carousel/event_24_C.jpg",
       "/images/carousel/event_24_D.jpg",
-      "/images/carousel/event_24_E.jpg",
-      "/images/carousel/event_24_F.jpg",
-      "/images/carousel/event_24_G.jpg",
+      // "/images/carousel/event_24_E.jpg",
+      // "/images/carousel/event_24_F.jpg",
+      // "/images/carousel/event_24_G.jpg",
       "/images/carousel/event_24_H.jpg",
-      "/images/carousel/event_24_I.jpg",
-      "/images/carousel/event_24_J.jpg",
-      "/images/carousel/event_24_K.jpg",
-      "/images/carousel/event_24_L.jpg",
-      "/images/carousel/event_24_M.jpg",
+      // "/images/carousel/event_24_I.jpg",
+      // "/images/carousel/event_24_J.jpg",
+      // "/images/carousel/event_24_K.jpg",
+      // "/images/carousel/event_24_L.jpg",
+      // "/images/carousel/event_24_M.jpg",
       "/images/carousel/event_24_N.jpg",
       "/images/carousel/event_24_O.jpg",
-      "/images/carousel/event_24_P.jpg",
-      "/images/carousel/event_24_Q.jpg",
+      // "/images/carousel/event_24_P.jpg",
+      // "/images/carousel/event_24_Q.jpg",
       "/images/carousel/event_24_R.jpg",
-      "/images/carousel/event_24_S.jpg",
-      "/images/carousel/event_24_T.jpg",
+      // "/images/carousel/event_24_S.jpg",
+      // "/images/carousel/event_24_T.jpg",
       "/images/carousel/slide6.jpeg",
-      "/images/carousel/slide7.jpeg",
-      "/images/carousel/earth_surface.jpg",
+      // "/images/carousel/slide7.jpeg",
     ],
     []
   );
@@ -143,7 +143,8 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
   };
   return (
     <>
-      <div className=" absolute md:top-[60px] top-[50px]  left-0  w-[100%] h-[600px] max-[750px]:h-[400px] max-[600px]:h-[350px] overflow-hidden z-[-1]">
+    {/* Landing page  Crousel image container */}
+      <div className="absolute md:top-[60px] top-[50px] brightness-50  left-0  w-[100%] aspect-[24/9] max-[750px]:h-[400px] max-[600px]:h-[350px] overflow-hidden z-[-1]">
         {images.length > 0 ? (
           images.map((imageUrl, index) => (
             <img
@@ -160,14 +161,15 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
           <div className="bg-[#080b11a3] loaderDateEvent h-[500px]"></div>
         )}
       </div>
+      
       <div
-        className={`relative  w-[100vw] h-[600px] max-[750px]:h-[400px]  max-[550px]:h-[350px]`}
+        className={`relative w-[100vw] aspect-[24/9] max-[750px]:h-[400px]  max-[550px]:h-[350px]`}
       >
         {/* Hero section  */}
-        <div className="w-[100%] h-[100%] px-[5%] md:shadow-[inset_0px_0px_255px_150px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
+        <div className="w-[100%] h-[100%] px-[5%]">
           {/* Hero contents  */}
           <div className="h-full grid place-content-center space-y-4 justify-items-center  text-center w-full">
-            <h1 className=" italic text-[#fff] text-4xl  md:text-6xl font-[900] ">
+            <h1 className=" italic text-[#fff] text-3xl  md:text-6xl font-[900] ">
               Unleash Your Potential <br /> with Tech
               <span className="text-sky-600">kshitiz '24</span>
             </h1>
@@ -234,6 +236,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
           </span>
         </div>
       </div>
+
       {/* Important announcement Popup Message bar */}
       <EventNotices />
 
@@ -369,7 +372,7 @@ function SponsorshipPartener() {
   const [sponsor, setSponsor] = useState(sponsorData);
   return (
     <>
-      <section className="bg-[#0d1526]">
+      <section className="bg-[#0D1526]">
         <h1 className="text-sky-600    text-[40px]  text-center font-[700]   max-[1024px]:text-[35px] max-[800px]:text-[30px] max-[480px]:text-[25px]">
           Sponsorship Partener
         </h1>
@@ -384,7 +387,7 @@ function SponsorshipPartener() {
             }}
           />
         </div>
-        <div className="sponsorship_parteners bg-zinc-300 py-2 mt-8 flex justify-center items-center">
+        <div className="sponsorship_parteners bg-[#0D1526] py-2 mt-2 flex justify-center items-center">
         
                 <a href={sponsorData.link} >
                   <img
