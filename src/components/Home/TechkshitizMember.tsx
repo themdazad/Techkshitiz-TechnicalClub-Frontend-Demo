@@ -7,10 +7,11 @@ import { CgScrollH } from "react-icons/cg";
 
 // faculty images
 const PrincipalImages = "/images/faculty/PrincipalSir.jpg";
-const PreetamAmrit = "/images/faculty/preetamamrit.jpg";
 const SundramMishra = "/images/faculty/SundramMishra.jpeg";
 const YamikaPatel = "/images/faculty/yamikapatel.jpg";
 const MohitPrakash = "/images/faculty/mohitprakash.jpg";
+const PreetamAmrit = "/images/faculty/preetamamrit.jpg";
+
 
 export const TechkshitizMember = () => {
   return (
@@ -39,7 +40,7 @@ export const TechkshitizMember = () => {
               borderImageSlice: 1,
             }}
           />
-          <p className="text-[#ffffffa1] mt-4 text-[20px] text-justify break-all max-sm-m:text-[16px]">
+          <p className="text-[#ffffffa1] text-[20px] text-justify break-all max-sm-m:text-[16px] mt-4">
             Our mission is to foster a vibrant community of tech enthusiasts
             passionate about innovation and collaboration. Whether you're a
             beginner eager to learn or an expert ready to share your knowledge,
@@ -92,7 +93,7 @@ const ClubIncharge = () => {
         />
         <MemberCard
           src={YamikaPatel}
-          name="Prof. Yamika Patel"
+          name="Dr. Yamika Patel"
           role="Mechanical Engineering"
         />
         <MemberCard
@@ -136,7 +137,7 @@ const CoreTeam = () => {
             <div className="space-y-0.5">
               <p className="text-lg text-sky-600 font-semibold">Vikash Kumar</p>
               <p className="text-slate-400 font-medium">
-               Full Stack Developer
+                Full Stack Web & Mobile Developer
               </p>
             </div>
             <div className="social_links flex max-sm:justify-center space-x-2">
@@ -198,7 +199,7 @@ const CoreTeam = () => {
               <a href="https://www.instagram.com/shahnoorishtiyaque/">
                 <FaInstagram />
               </a>
-              
+
             </div>
           </div>
         </div>
@@ -221,7 +222,7 @@ const CoreTeam = () => {
               {/* <a href="https://www.instagram.com//">
                 <FaInstagram />
               </a> */}
-              
+
             </div>
           </div>
         </div>

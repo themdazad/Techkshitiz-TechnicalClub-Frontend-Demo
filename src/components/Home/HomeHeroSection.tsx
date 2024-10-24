@@ -1,19 +1,43 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CountDownEvent from "./CountDownEvent.tsx";
-// import Slide from "../Loader/Slide.tsx";
+import Slide from "../Loader/Slide.tsx";
 import EventNotices from "../PopUpMessages/EventNotices.tsx";
 import { useMemo } from "react";
-// import { ComingSoon } from "../ComingSoon/ComingSoon.tsx";
+import { ComingSoon } from "../ComingSoon/ComingSoon.tsx";
 function HomeHeroSection({ winnerParticipantData, IsLoading }) {
   const images = useMemo(
     () => [
       "/images/carousel/earth_surface.jpg",
-      "/images/carousel/slide2.jpeg",
-      "/images/carousel/slide4.jpeg",
-      "/images/carousel/slide5.jpeg",
+      "/images/carousel/event_winners_24.jpg",
+      "/images/carousel/techkshitiz_member.jpeg",
+      "/images/carousel/event_24_certificate_distrubution.jpg",
+      "/images/carousel/event_24_Members.jpg",
+      // "/images/carousel/event_24_facuilty_Incharge.jpg",
+      "/images/carousel/event_24.jpg",
+      // "/images/carousel/event_24_Starting.jpg",
+      // "/images/carousel/event_24_A.jpg",
+      // "/images/carousel/event_24_B.jpg",
+      // "/images/carousel/event_24_C.jpg",
+      "/images/carousel/event_24_D.jpg",
+      // "/images/carousel/event_24_E.jpg",
+      // "/images/carousel/event_24_F.jpg",
+      // "/images/carousel/event_24_G.jpg",
+      "/images/carousel/event_24_H.jpg",
+      // "/images/carousel/event_24_I.jpg",
+      // "/images/carousel/event_24_J.jpg",
+      // "/images/carousel/event_24_K.jpg",
+      // "/images/carousel/event_24_L.jpg",
+      // "/images/carousel/event_24_M.jpg",
+      "/images/carousel/event_24_N.jpg",
+      "/images/carousel/event_24_O.jpg",
+      // "/images/carousel/event_24_P.jpg",
+      // "/images/carousel/event_24_Q.jpg",
+      "/images/carousel/event_24_R.jpg",
+      // "/images/carousel/event_24_S.jpg",
+      // "/images/carousel/event_24_T.jpg",
       "/images/carousel/slide6.jpeg",
-      "/images/carousel/slide7.jpeg",
+      // "/images/carousel/slide7.jpeg",
     ],
     []
   );
@@ -115,11 +139,12 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
 
   const navigate = useNavigate();
   const OnClickWinnerDataShow = (WinnerParticipantClickedData) => {
-    // navigate(`student/v1/${WinnerParticipantClickedData?.Participant_Name}/${WinnerParticipantClickedData?.Participant_profile_Id}`, { state: WinnerParticipantClickedData })
+    navigate(`student/v1/${WinnerParticipantClickedData?.Participant_Name}/${WinnerParticipantClickedData?.Participant_profile_Id}`, { state: WinnerParticipantClickedData })
   };
   return (
     <>
-      <div className=" absolute md:top-[60px] top-[50px]  left-0  w-[100%] h-[600px] max-[750px]:h-[400px] max-[600px]:h-[350px] overflow-hidden z-[-1]">
+    {/* Landing page  Crousel image container */}
+      <div className="absolute md:top-[60px] top-[50px] brightness-50  left-0  w-[100%] aspect-[24/9] max-[750px]:h-[400px] max-[600px]:h-[350px] overflow-hidden z-[-1]">
         {images.length > 0 ? (
           images.map((imageUrl, index) => (
             <img
@@ -136,14 +161,15 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
           <div className="bg-[#080b11a3] loaderDateEvent h-[500px]"></div>
         )}
       </div>
+      
       <div
-        className={`  w-[100vw] h-[600px] max-[750px]:h-[400px]  max-[550px]:h-[350px]`}
+        className={`relative w-[100vw] aspect-[24/9] max-[750px]:h-[400px]  max-[550px]:h-[350px]`}
       >
         {/* Hero section  */}
-        <div className="w-[100%] h-[100%] px-[5%] md:shadow-[inset_0px_0px_255px_150px_#000] max-md:shadow-[inset_0px_0px_1000px_10px_#000]">
+        <div className="w-[100%] h-[100%] px-[5%]">
           {/* Hero contents  */}
           <div className="h-full grid place-content-center space-y-4 justify-items-center  text-center w-full">
-            <h1 className=" italic text-[#fff] text-4xl  md:text-6xl font-[900] ">
+            <h1 className=" italic text-[#fff] text-3xl  md:text-6xl font-[900] ">
               Unleash Your Potential <br /> with Tech
               <span className="text-sky-600">kshitiz '24</span>
             </h1>
@@ -160,7 +186,7 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
             />
           </div>
 
-          <div className="w-[100%] flex justify-center items-center gap-2 -mt-6">
+          {/* <div className="w-[100%] flex justify-center items-center gap-2 -mt-6">
             {images.map((imageUrl, index) => (
               <span
                 key={index}
@@ -171,18 +197,55 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
                 onClick={() => OnclickSlideImageSet(index)}
               ></span>
             ))}
-          </div>
+          </div> */}
+        </div>
+        {/* 
+           Left arrow button
+          */}
+        <div className="absolute top-[45%] left-[10px] max-sm:hidden  md:left-[3%] w-[50px] h-[50px] cursor-pointer text-[#fff]  hover:bg-[#1f314b] font-[700] rounded-[50%] flex justify-center items-center border-[2px] border-[#1f314b]">
+          <span
+            style={{ transition: "all 1s" }}
+            className="material-symbols-outlined overflow-hidden"
+            onClick={() =>
+              setCurrentImageIndex(
+                currentImageIndex === 0
+                  ? images.length - 1
+                  : currentImageIndex - 1
+              )
+            }
+          >
+            keyboard_arrow_left
+          </span>
+        </div>
+        {/* 
+          Right arrow button
+          */}
+        <div className="absolute top-[45%] right-[10px] md:right-[3%] max-sm:hidden w-[50px] h-[50px] cursor-pointer text-[#fff]  hover:bg-[#1f314b] font-[700] rounded-[50%] flex justify-center items-center border-[2px] border-[#1f314b]">
+          <span
+            style={{ transition: "all 1s" }}
+            className="material-symbols-outlined overflow-hidden"
+            onClick={() =>
+              setCurrentImageIndex(
+                currentImageIndex === images.length - 1
+                  ? 0
+                  : currentImageIndex + 1
+              )
+            }
+          >
+            keyboard_arrow_right
+          </span>
         </div>
       </div>
+
       {/* Important announcement Popup Message bar */}
       <EventNotices />
 
       {/* past event winners section */}
       <section className="bg-[#0d1526] w-[100%] h-[420px] py-12">
         {/* heading  */}
-        <div className="">
-          <h1 className="text-sky-600    text-[40px]  text-center font-[700]   max-[1024px]:text-[35px] max-[800px]:text-[30px] max-[480px]:text-[25px]">
-            WINNERS
+        <div>
+          <h1 className="text-sky-600  text-[40px] text-center font-[700] max-[1024px]:text-[35px] max-[800px]:text-[30px] max-[480px]:text-[25px]">
+            TechKshitiz 24 Winners
           </h1>
 
           <div className="w-[100%] flex justify-center items-center">
@@ -198,91 +261,95 @@ function HomeHeroSection({ winnerParticipantData, IsLoading }) {
         </div>
         {/* heading:end  */}
 
-        {/* IsLoading */}
-        {/* {IsLoading && currentImageIndexWinner.length ? ( */}
-        {/* {IsLoading? ( */}
-        <>
-          {/* winner profile  */}
-          <div className="flex  items-center justify-between w-[100%] h-[auto] p-[10px]">
-            <div className="p-[20px] flex justify-center items-center w-[100px]  h-[100%] max-[800px]:hidden">
-              <span
-                style={{ transition: "all 1s" }}
-                onClick={OnHandelPreviousClick}
-                className={`${
-                  SlidePageCalculate > 1 ? "flex" : "hidden"
-                } material-symbols-outlined w-[50px] h-[50px]  cursor-pointer text-[#fff]   hover:bg-[#1f314b] font-[700]  rounded-[50%]   justify-center items-center border-[2px] border-[#1f314b]`}
-              >
-                keyboard_arrow_left
-              </span>
+        {/* winner profile  */}
+        {IsLoading ? (
+          <div className=" w-[100%] h-[100%] p-[20px]">
+            <Slide />
+          </div>
+        ) : currentImageIndexWinner.length ? (
+          <>
+            <div className="flex  items-center justify-between w-[100%] h-[auto] p-[10px]">
+              <div className="p-[20px] flex justify-center items-center w-[100px]  h-[100%] max-[800px]:hidden">
+                <span
+                  style={{ transition: "all 1s" }}
+                  onClick={OnHandelPreviousClick}
+                  className={`${
+                    SlidePageCalculate > 1 ? "flex" : "hidden"
+                  } material-symbols-outlined w-[50px] h-[50px]  cursor-pointer text-[#fff]   hover:bg-[#1f314b] font-[700]  rounded-[50%]   justify-center items-center border-[2px] border-[#1f314b]`}
+                >
+                  keyboard_arrow_left
+                </span>
+              </div>
+              {/* winner cards section  */}
+              <div className=" flex gap-6 p-[20px]">
+                {currentImageIndexWinner.map((data, index) => (
+                  <>
+                    {/* winner card  */}
+                    <div
+                      key={index}
+                      style={{ transition: "all 0.5s" }}
+                      className=" snap-x overflow-hidden bg-slate-900 rounded-3xl border-[#162435] w-[150px] h-[210px] p-3 cursor-default border-2 hover:border-[#1f3044] hover:shadow-[0px_opx_100px_10px_#1b2a3c]"
+                      onClick={() => OnClickWinnerDataShow(data)}
+                    >
+                      <div className=" snap-center w-[100%] p-[10px] flex justify-center items-center">
+                        <img
+                          src={Object(data).Participant_Avtar}
+                          className="w-[110px] aspect-square rounded-full "
+                          alt="winners"
+                        />
+                      </div>
+                      <div className="h-[52px] w-[100%]">
+                        <p className="text-md md:text-lg text-center  w-full truncate  font-[700] capitalize text-[#EEEEEE]">
+                          {String(Object(data).Participant_Name).substring(
+                            0,
+                            15
+                          )}
+                        </p>
+                        <p className="text-[15px] w-full truncate text-center  font-[400] capitalize text-[#DFDFDF]">
+                          {String(
+                            Object(data).Participant_Event_Name
+                          ).substring(0, 12)}{" "}
+                          {Object(data).Participant_Event_Year}
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                ))}
+              </div>
+              {/* winner cards section:end  */}
+              <div className="p-[20px] flex justify-center items-center w-[100px] h-[100%] max-[800px]:hidden">
+                <span
+                  style={{ transition: "all 1s" }}
+                  onClick={OnHandelNextClick}
+                  className={`${
+                    SlidePageCalculate > 1 ? "flex" : "hidden"
+                  } material-symbols-outlined  w-[50px] h-[50px] cursor-pointer text-[#fff]  hover:bg-[#1f314b] font-[700] rounded-[50%] flex justify-center items-center border-[2px] border-[#1f314b]`}
+                >
+                  keyboard_arrow_right
+                </span>
+              </div>
             </div>
-            {/* winner cards section  */}
-            <div className=" flex gap-6 p-[20px]">
-              {currentImageIndexWinner.map((data, index) => (
-                <>
-                  {/* winner card  */}
-                  <div
-                    key={index}
-                    style={{ transition: "all 0.5s" }}
-                    className=" snap-x overflow-hidden bg-slate-900 rounded-3xl border-[#162435] w-[150px] h-[210px] p-3 cursor-default border-2 hover:border-[#1f3044] hover:shadow-[0px_opx_100px_10px_#1b2a3c]"
-                    onClick={() => OnClickWinnerDataShow(data)}
-                  >
-                    <div className=" snap-center w-[100%] p-[10px] flex justify-center items-center">
-                      <img
-                        src={Object(data).Participant_Avtar}
-                        className="w-[110px] aspect-square rounded-full "
-                        alt="winners"
-                      />
-                    </div>
-                    <div className="h-[52px] w-[100%]">
-                      <p className="text-md md:text-lg text-center  w-full truncate  font-[700] capitalize text-[#EEEEEE]">
-                        {String(Object(data).Participant_Name).substring(0, 15)}
-                      </p>
-                      <p className="text-[15px] w-full truncate text-center  font-[400] capitalize text-[#DFDFDF]">
-                        {String(Object(data).Participant_Event_Name).substring(
-                          0,
-                          12
-                        )}{" "}
-                        {Object(data).Participant_Event_Year}
-                      </p>
-                    </div>
-                  </div>
-                </>
+            {/* winner profile:end  */}
+            <div className="w-[100%] h-[40px] flex justify-center items-center gap-2 ">
+              {bubbleArray.map((imageUrl, index) => (
+                <span
+                  key={index}
+                  style={{ transition: "background-color 1s ease" }}
+                  className={`w-[16px] h-[4px] rounded-full  hover:bg-[#fff] ${
+                    index === SlidePage ? "bg-sky-600" : "bg-[#ffffff1a]"
+                  } cursor-pointer`}
+                  onClick={() => OnclickWinnerSlideImageSet(index)}
+                ></span>
               ))}
             </div>
-            {/* winner cards section:end  */}
-            <div className="p-[20px] flex justify-center items-center w-[100px] h-[100%] max-[800px]:hidden">
-              <span
-                style={{ transition: "all 1s" }}
-                onClick={OnHandelNextClick}
-                className={`${
-                  SlidePageCalculate > 1 ? "flex" : "hidden"
-                } material-symbols-outlined  w-[50px] h-[50px] cursor-pointer text-[#fff]  hover:bg-[#1f314b] font-[700] rounded-[50%] flex justify-center items-center border-[2px] border-[#1f314b]`}
-              >
-                keyboard_arrow_right
-              </span>
-            </div>
-          </div>
-          {/* winner profile:end  */}
-          <div className="w-[100%] h-[40px] flex justify-center items-center gap-2 ">
-            {bubbleArray.map((imageUrl, index) => (
-              <span
-                key={index}
-                style={{ transition: "background-color 1s ease" }}
-                className={`w-[16px] h-[4px] rounded-full  hover:bg-[#fff] ${
-                  index === SlidePage ? "bg-sky-600" : "bg-[#ffffff1a]"
-                } cursor-pointer`}
-                onClick={() => OnclickWinnerSlideImageSet(index)}
-              ></span>
-            ))}
-          </div>
-        </>
-        {/* ) : (
+          </>
+        ) : (
           <div className="w-[100%]  h-[250px] flex justify-center items-center ">
             <h1 className=" uppercase text-[30px] font-[700] text-center animate-pulse text-[#ffdd00] max-[480px]:text-[20px] max-[300px]:text-[12px] max-[700px]:text-[30px]  ">
-              <ComingSoon text="Winner not available"/>
+              <ComingSoon text="Winner not available" />
             </h1>
           </div>
-        )} */}
+        )}
       </section>
 
       {/* Sponsorship  */}
@@ -298,16 +365,14 @@ export default HomeHeroSection;
 let sponsorData = {
   name: "New Fassion House",
   link: "https://",
-  image:
-    "/images/sponsors/NewFashionHouse.png",
+  image: "/images/sponsors/NewFashionHouse.png",
 };
-
 
 function SponsorshipPartener() {
   const [sponsor, setSponsor] = useState(sponsorData);
   return (
     <>
-      <section className="bg-[#0d1526]">
+      <section className="bg-[#0D1526]">
         <h1 className="text-sky-600    text-[40px]  text-center font-[700]   max-[1024px]:text-[35px] max-[800px]:text-[30px] max-[480px]:text-[25px]">
           Sponsorship Partener
         </h1>
@@ -322,7 +387,7 @@ function SponsorshipPartener() {
             }}
           />
         </div>
-        <div className="sponsorship_parteners bg-zinc-300 py-2 mt-8 flex justify-center items-center">
+        <div className="sponsorship_parteners bg-[#0D1526] py-2 mt-2 flex justify-center items-center">
         
                 <a href={sponsorData.link} >
                   <img

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import CatrasoAnimationLoading from "../../Loader/CatrasoAnimationLoading.tsx";
-import { log } from "console";
 const baseUrl = process.env.REACT_APP_BACKEND_URL;
 function StudentSideNavBar({ getdata, SideBarOpenClose, SetSideBarOpenClose }) {
   const [IsLoading, SetIsLoading] = useState(false);
@@ -86,6 +85,23 @@ function StudentSideNavBar({ getdata, SideBarOpenClose, SetSideBarOpenClose }) {
           <div className="w-[100%] h-[auto] p-[20px] border-b-2 border-dashed border-[#1c2f48] max-sm-m:p-2">
             <NavLink
               onClick={ClickNavBarMenu}
+              to="/student/profile/update"
+              style={{ transition: "all 1s" }}
+              className="w-[100%] h-[40px] flex justify-start gap-2 text-[#fff] items-center rounded-[10px] hover:bg-[#1b2e3d]  bg-[#10192d] border-[1px] border-[#1c2b4c] cursor-pointer  pl-[15px] mb-2"
+            >
+              <span className="material-symbols-outlined text-[22px] max-sm-m:text-[18px]">
+                person_edit
+              </span>
+              <span className="  max-sm-m:text-[12px] font-[400]">
+                Profile Update
+              </span>
+              <span className="NewButton text-[12px] font-[400] text-[#d63500]  border-radius: 22px; border-[1px] border-[D63500] bg-[#FBEBEA] flex h-[14px] p-[8px]  items-center test-[10px] rounded-[8px] relative   overflow-hidden left-[50px]">
+                {" "}
+                New
+              </span>
+            </NavLink>
+            <NavLink
+              onClick={ClickNavBarMenu}
               to="/student/profile/add-members"
               style={{ transition: "all 1s" }}
               className="w-[100%] h-[40px] flex justify-start gap-2 text-[#fff] items-center rounded-[10px] hover:bg-[#1b2e3d]  bg-[#10192d] border-[1px] border-[#1c2b4c] cursor-pointer  pl-[15px] mb-2"
@@ -96,7 +112,7 @@ function StudentSideNavBar({ getdata, SideBarOpenClose, SetSideBarOpenClose }) {
               <span className="  max-sm-m:text-[12px] font-[400]">
                 Add Members
               </span>
-              <span className="NewButton text-[12px] font-[400] text-[#d63500]  border-radius: 22px; border-[1px] border-[D63500] bg-[#FBEBEA] flex h-[14px] p-[8px]  items-center test-[10px] rounded-[8px] relative   overflow-hidden left-[60px]">
+              <span className="NewButton text-[12px] font-[400] text-[#d63500]  border-radius: 22px; border-[1px] border-[D63500] bg-[#FBEBEA] flex h-[14px] p-[8px]  items-center test-[10px] rounded-[8px] relative   overflow-hidden left-[50px]">
                 {" "}
                 New
               </span>
@@ -108,7 +124,7 @@ function StudentSideNavBar({ getdata, SideBarOpenClose, SetSideBarOpenClose }) {
               className="w-[100%] h-[40px] flex justify-start gap-2 text-[#fff] items-center rounded-[10px] hover:bg-[#1b2e3d]  bg-[#10192d] border-[1px] border-[#1c2b4c] cursor-pointer pl-[15px] mb-2"
             >
               <span className="material-symbols-outlined text-[22px] max-sm-m:text-[18px] ">
-                person_add
+                recent_actors
               </span>
               <span className="  max-sm-m:text-[12px] font-[400]">
                 Registrations/Applications
