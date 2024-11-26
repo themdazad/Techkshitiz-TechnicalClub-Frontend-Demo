@@ -2,7 +2,7 @@
 import React from "react";
 
 // icons
-import { FaInstagram, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { CgScrollH } from "react-icons/cg";
 
 // faculty images
@@ -12,13 +12,15 @@ const YamikaPatel = "/images/faculty/yamikapatel.jpg";
 const MohitPrakash = "/images/faculty/mohitprakash.jpg";
 const PreetamAmrit = "/images/faculty/preetamamrit.jpg";
 
-
 export const TechkshitizMember = () => {
   return (
     <div className="bg-[#0d1526]  w-full h-auto  flex flex-col ">
+      {/* About Technical Club  */}
+      <AboutTechnicalClub />
       {/* Principal's Message: */}
       <section className="principal-message my-12 bg-[#0d1526] flex gap-[200px]  justify-center items-center max-xl:flex-col  max-md:p-0 max-xl:gap-8 max-lg:gap-4">
         <div className="w-[350px] h-[400px] mt-10 max-sm:mt-1 flex  xl:flex-col max-xl:w-full max-xl:gap-10 max-lg:p-0 max-sm:flex-col justify-center items-center p-3 ">
+          {/* Principal's Image  */}
           <img
             className="w-[330px] h-[350px] rounded-3xl hover:bg-[#1f314b] max-lg:w-[250px] max-lg:h-[280px] max-sm:w-[280px] max-sm:h-[300px]"
             src={PrincipalImages}
@@ -40,7 +42,7 @@ export const TechkshitizMember = () => {
               borderImageSlice: 1,
             }}
           />
-          <p className="text-[#ffffffa1] text-[20px] text-justify break-all max-sm-m:text-[16px] mt-4">
+          <p className="text-zinc-400 text-[20px] text-justify break-all max-sm-m:text-[16px] mt-4">
             Our mission is to foster a vibrant community of tech enthusiasts
             passionate about innovation and collaboration. Whether you're a
             beginner eager to learn or an expert ready to share your knowledge,
@@ -63,11 +65,32 @@ export const TechkshitizMember = () => {
   );
 };
 
+const AboutTechnicalClub = () => {
+  return (
+    <section className="bg-[#0d1526] w-full min-h-[200px] text-center font-bold py-16">
+      {/* Technical CLub Logo  */}
+      <img
+        className="w-[300px] mx-auto"
+        src="/images/TechKshitiz_Logo.png"
+        alt="Technical Club Logo"
+      />
+      {/* Technical Club Tittle  */}
+      <h1 className=" text-white font-bold text-xl md:text-3xl py-2">
+        About Technical Club
+      </h1>
+      {/* Technical Club Descriptions  */}
+      <p className="text-zinc-400 max-sm:text-sm text-justify px-[5%] md:px-[10%]">We’re proud to be the official technical club of the Government Engineering College, Siwan, established in 2022 with a mission to create a thriving community of tech enthusiasts. At TechKshitiz, we focus on nurturing talent, inspiring creativity, and fostering a culture of technological excellence.
+
+Our club serves as a platform where students can explore, learn, and showcase their skills in real-world applications. From hands-on projects to dynamic workshops and thrilling competitions, we provide opportunities that bridge academic knowledge with practical innovation.</p>
+    </section>
+  );
+};
+
 // Club Incharge Details
 const ClubIncharge = () => {
   return (
     <section className="px-[5%] club_incharge">
-       <div className="club_incharge_heading max-w-max">
+      <div className="club_incharge_heading max-w-max">
         <h1 className="font-[700] text-[40px] p-1 text-sky-600 max-sm-m:text-[30px]">
           Club Incharge
         </h1>
@@ -125,7 +148,7 @@ const CoreTeam = () => {
         />
       </div>
       {/* card  */}
-      <div className="cards overflow-scroll snap-x snap-mandatory my-4 gap-3 flex" >
+      <div className="cards overflow-scroll snap-x snap-mandatory my-4 gap-3 flex">
         {/* 1st person  */}
         <div className="snap-center p-4 min-w-[300px]  max-sm:w-full mx-auto bg-sky-600/10 rounded-3xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
           <img
@@ -189,17 +212,15 @@ const CoreTeam = () => {
           />
           <div className="text-center space-y-2 sm:text-left">
             <div className="space-y-0.5">
-              <p className="text-lg text-sky-600 font-semibold">Shahnoor Ishtiyaque
+              <p className="text-lg text-sky-600 font-semibold">
+                Shahnoor Ishtiyaque
               </p>
-              <p className="text-slate-400 font-medium">
-                Content Creator
-              </p>
+              <p className="text-slate-400 font-medium">Content Creator</p>
             </div>
             <div className="social_links flex max-sm:justify-center space-x-2">
               <a href="https://www.instagram.com/shahnoorishtiyaque/">
                 <FaInstagram />
               </a>
-
             </div>
           </div>
         </div>
@@ -212,22 +233,20 @@ const CoreTeam = () => {
           />
           <div className="text-center space-y-2 sm:text-left">
             <div className="space-y-0.5">
-              <p className="text-lg text-sky-600 font-semibold">Bittu Kumar
-              </p>
-              <p className="text-slate-400 font-medium">
-                Graphic Designer
-              </p>
+              <p className="text-lg text-sky-600 font-semibold">Bittu Kumar</p>
+              <p className="text-slate-400 font-medium">Graphic Designer</p>
             </div>
             <div className="social_links flex max-sm:justify-center space-x-2">
               {/* <a href="https://www.instagram.com//">
                 <FaInstagram />
               </a> */}
-
             </div>
           </div>
         </div>
       </div>
-      <center className="text-3xl"><CgScrollH /></center>
+      <center className="text-3xl">
+        <CgScrollH />
+      </center>
     </section>
   );
 };
