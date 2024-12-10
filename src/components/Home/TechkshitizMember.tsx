@@ -71,7 +71,7 @@ const AboutTechnicalClub = () => {
       {/* Technical CLub Logo  */}
       <img
         className="w-[300px] mx-auto"
-        src="/images/TechKshitiz_Logo.png"
+        src="images/TechKshitiz_Logo.png"
         alt="Technical Club Logo"
       />
       {/* Technical Club Tittle  */}
